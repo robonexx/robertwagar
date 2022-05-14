@@ -3,6 +3,7 @@ import Rob1 from './Rob1';
 import RobBg from './RobBg';
 
 import { motion } from 'framer-motion';
+import Logo from './logo/Logo';
 const transition = { duration: 1, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const firstWord = {
@@ -34,7 +35,7 @@ const lastWord = {
 };
 const letter = {
   initial: {
-    y: -400,
+    y: -600,
   },
   animate: {
     y: 0,
@@ -53,6 +54,7 @@ const letter2 = {
 function App() {
   return (
     <motion.div className='App'>
+      <Logo />
       <div className='wrapper'>
         <motion.h1
           initial={{ x: 0, opacity: 0 }}
