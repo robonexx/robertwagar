@@ -18,6 +18,16 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
   align-items: center;
   justify-content: center;
 
+  p {
+    color: white;
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      top: 10rem;
+      font-size: 1.2rem;
+      margin: 5rem 0 0;
+    }
+  }
+
   h1 {
     transform: rotate(-10deg);
     top: 100px;
@@ -40,6 +50,10 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
             font-size: 3.5rem;
             margin: 5rem 0;
           }
+          @media screen and (max-width: 420px) {
+            font-size: 3rem;
+           
+          }
   }
 }
 
@@ -54,8 +68,12 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
     z-index: 10;
 
         @media screen and (max-width: 768px) {
+          font-size: 3.5rem;
+        }
+
+        @media screen and (max-width: 420px) {
           font-size: 3rem;
-          
+         
         }
 
 
@@ -64,7 +82,7 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
             padding-right: 2rem;
             @media screen and (max-width: 768px) {
               padding-top: 4rem;
-              padding-right: 1rem;
+              padding-right: 0rem;
             }
         }
         .last {
@@ -72,8 +90,8 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
             padding-right: 2rem;
             @media screen and (max-width: 768px) {
               padding-top: 3rem;
-              padding-right: 1rem;
-              &:nth-child(2n) {
+              padding-right: 2rem;
+              &:nth-child(3n -1) {
                 font-size: 2.5rem;
                }
             }
@@ -95,10 +113,19 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
           @media screen and (max-width: 768px) {
             letter-spacing: -.4rem;
 
-            &:nth-child(3n + 1) {
-              font-size: 3.5rem;
+            &:nth-child(3n + 2) {
+              font-size: 3rem;
              }
 
+          }
+
+          @media screen and (max-width: 420px) {
+            font-size: 3rem;
+
+            &:nth-child(3n + 2) {
+              font-size: 2.5rem;
+             }
+           
           }
         }
 

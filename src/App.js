@@ -60,6 +60,9 @@ function App() {
     <motion.div className='App'>
       <Header />
       <div className='wrapper'>
+        <motion.p className='joke' variants={lastWord}>
+          <motion.span variants={letter}>Seaching for a...</motion.span>
+        </motion.p>
         <motion.h1
           initial={{ x: 0, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
