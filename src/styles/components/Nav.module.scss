@@ -8,7 +8,7 @@
   font-family: $font-base;
   display: block;
   font-size: 1.2rem;
-  background-color: rgba(0,0,0,.125);
+  background-color: rgba(0, 0, 0, 0.267);
   overflow-x: hidden;
   transition: all 0.4s linear;
 }
@@ -53,14 +53,16 @@
 }
 
 .link_icon {
-  --button-size: calc(60px * 0.5);
-  width: 32px;
-  height: 32px;
+  --button-size: calc(60px * 0.8);
+  width: 42px;
+  height: 42px;
   padding: 0 0.5rem;
    align-items: center;
    justify-content: center;
    transition: filter 300ms;
-   color: $color-3;
+   svg path {
+    fill: $color-5;
+  }
 }
 
 .nav_icon {

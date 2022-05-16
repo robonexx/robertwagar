@@ -22,7 +22,7 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
     transform: rotate(-10deg);
     top: 100px;
     position: relative;
-    font-size: 12rem;
+    font-size: 10rem;
     background-image: $color-gradient-white;
           background-size: 100%;
           -webkit-background-clip: text;
@@ -31,7 +31,7 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
           -moz-text-fill-color: transparent;
           text-transform: uppercase;
           font-family: 'Roboto', sans-serif;
-          filter: drop-shadow(-1px 2px 1px rgb(119, 119, 119)) drop-shadow(0 4px 2px rgb(0, 0, 0)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
+          filter: drop-shadow(-1px 2px 1px rgb(119, 119, 119)) drop-shadow(0 4px 2px rgba(0, 0, 0, 0.952)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
           cursor: pointer;
           overflow: hidden;
           z-index: 10;
@@ -48,25 +48,34 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
   transform: rotate(-10deg) translateY(50px);
     position: relative;
     display: flex;
-    font-size: 12rem;        
+    font-size: 8rem;        
     cursor: pointer;
     overflow: hidden;
     z-index: 10;
 
         @media screen and (max-width: 768px) {
-          font-size: 4.5rem;
+          font-size: 3rem;
+          
         }
 
 
         .first {     
           padding-top: 0rem;    
             padding-right: 2rem;
+            @media screen and (max-width: 768px) {
+              padding-top: 4rem;
+              padding-right: 1rem;
+            }
         }
         .last {
             padding-top: 10rem;
             padding-right: 2rem;
             @media screen and (max-width: 768px) {
               padding-top: 3rem;
+              padding-right: 1rem;
+              &:nth-child(2n) {
+                font-size: 2.5rem;
+               }
             }
         }
         span {
@@ -81,7 +90,16 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
           -moz-text-fill-color: transparent;
           text-transform: uppercase;
           font-family: 'Roboto', sans-serif;
-          filter: drop-shadow(-1px -1px 1px rgb(255, 255, 255)) drop-shadow(3px 3px 5px rgba(10, 10, 10, 0.541)) drop-shadow(0 0 20px rgba(17, 17, 17, 0.233));
+          filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, 0.418)) drop-shadow(3px 3px 5px rgba(10, 10, 10, 0.24)) drop-shadow(0 0 10px rgba(17, 17, 17, 0.137));
+
+          @media screen and (max-width: 768px) {
+            letter-spacing: -.4rem;
+
+            &:nth-child(3n + 1) {
+              font-size: 3.5rem;
+             }
+
+          }
         }
 
 }

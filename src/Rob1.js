@@ -3,24 +3,6 @@ import { motion } from 'framer-motion'
 
 import './App.scss'
 
-const loadingVariants = {
-  hidden: {
-      scale: 0,
-    opacity: 0,
-      x: 0,
-  },
-  visible: {
-      scale: 1,
-      opacity: 1,
-    stroke: 1,
-      x: 0,
-      transition: {
-          delay: 0.4,
-          duration: 5
-      },
-  }
-}
-
 const pathVariants = {
   hidden: {
       pathLength: 0,

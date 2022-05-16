@@ -6,6 +6,7 @@
     z-index: 1000;
     transition: all 0.4s ease-in;
     padding: 0.25rem 0;
+   
 
     a {
         position: absolute;
@@ -14,6 +15,7 @@
         width: 100%;
         height: 100%;
         cursor: pointer;
+        
     }
 
     @media screen and (max-width: 768px) {
@@ -21,10 +23,23 @@
       }
     
     > svg {
+       
         > path {
            stroke: rgb(119, 119, 119);
         }
 
         filter: drop-shadow(0 1px 1px rgb(0, 0, 0));
+    }
+
+    &:hover {
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        > svg {
+            > path {
+                fill:white;
+               stroke: rgb(0, 0, 0);
+            }
+    
+            filter: drop-shadow(0 1px 1px rgb(0, 0, 0));
+        }
     }
 }
