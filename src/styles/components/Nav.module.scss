@@ -96,11 +96,17 @@ a .mobile {
   background: $color-3;
 
   .nav_links {
-    color: $color-5;
+    color: $color-client-3;
   }
+
   .link_icon {
+     
     transform: rotate(0.2deg) translateX(-2px);
+    svg path {
+      fill: $color-4;
+    }
   }
+  
 } 
 
 
