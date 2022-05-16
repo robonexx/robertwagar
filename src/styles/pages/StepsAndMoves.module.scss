@@ -1,0 +1,86 @@
+@use '../base/' as*;
+
+.steps_wrapper {
+    font-family: $font-base;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-base;
+    background: $color-bg;
+
+    .container_top {
+        margin: 10rem auto 0;
+        padding-top: 5rem;
+        height: 100%;
+        
+
+        h1 {
+            color: $color-client-2;
+            margin-bottom: 3rem;
+            font-size: $font-size-xl;
+        }
+
+        h2 {
+            color: $color-client-2;
+            margin-bottom: 1rem;
+            font-size: $font-size-ml;
+        }
+
+        h4 {
+            color: $color-client-1;
+            font-weight: 400;
+            font-size: $font-size-m;
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+.faq_section {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 960px) {
+    .steps_wrapper {
+        .container_top {
+            padding: 5rem 2rem 0;
+            >h1 {
+                font-size: 2rem;
+            }
+            >h4 {
+                font-size: 1rem;
+                margin-bottom: 2.5rem;
+            }
+        } 
+        .faq_section {
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+    }
+  }
+  @media screen and (max-width: 460px) {
+    .steps_wrapper {
+        .container_top {
+            padding: 3rem 2rem 0;
+            >h1 {
+                font-size: 2rem;
+            }
+            >h4 {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        } 
+        .faq_section {
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+    }
+  }

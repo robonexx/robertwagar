@@ -1,0 +1,219 @@
+@use '../base' as *;
+@use '../abstracts' as *;
+
+.hero {
+    position: relative;
+    padding: 0;
+    background: transparent;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-base;
+    
+    .hero_video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
+      z-index: 1;
+
+      >video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .hero_overlay {
+      font-family: $font-alt;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.068) 20%, rgba(0,0,0,0.125) 50%,rgba(0, 0, 0, 0.952) 80%);
+      z-index: 2;
+    }
+    .hero_wrapper {
+      position: relative;
+      height: fit-content;
+      max-width: 1000px;
+      width: 100%;
+      z-index: 10;
+
+      .hero_logo {
+        margin-top: 100px;
+        position: relative;
+        display: block;
+        max-width: 1000px;
+        height: 260px;
+        object-fit: cover;
+
+        // check if its a tablet
+        @media (min-width: 769px) and 
+       (max-width: 1024px) and 
+       (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 769px) and 
+       (max-width: 1024px) and 
+       (min-resolution: 192dpi) {
+         margin-top: 0vh;
+         margin-bottom: 100px;
+
+}
+
+        >span {
+          
+          >img {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+          }
+        }
+
+      }
+      
+    
+      > .hero_pretitle {
+        font-size: $font-size-xl;
+        font-weight: 400;
+        color: $color-client-2;
+        text-shadow: 0 2px 1px rgba(0,0,0,.825);
+      }
+      .hero_title {
+        padding: 3rem 0;
+        font-family: $font-alt;
+        font-size: $font-size-xxxl;
+        color: $color-client-1;
+        font-weight: $font-bold;
+        text-shadow: 0 4px 1px rgba(0,0,0,.825);
+      }
+    
+        .hero_subtitle {
+          font-size: $font-size-xl;
+          font-weight: 400;
+          color: white;
+          text-shadow: 0 2px 1px rgba(0,0,0,.825);
+          
+        }
+    }
+}
+
+
+  
+@media screen and (max-width: 960px) {
+
+    .hero {
+  
+      .hero_wrapper {    
+         justify-content: flex-start;
+
+         .hero_logo {
+          transform: scale(0.90);
+        }
+        > .hero-pretitle {
+          margin-top: 30vh;
+          font-size: $font-size-l;
+        }
+        .hero_title {
+          max-width: 100%;
+          font-size: $font-size-xl;
+        }
+      
+          .hero_subtitle {
+            font-size: $font-size-ml;
+           padding: 0 2.5rem;
+          
+          }
+      }
+    }
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .hero {
+        width: 100%;
+        .hero_wrapper {
+          width: 100%;
+
+          .hero_logo {
+            margin-top: 10vh;
+            transform: scale(0.85);
+          }
+
+          > .hero_pretitle {
+            font-size: $font-size-ml;
+          }
+            .hero_title {
+              font-size: $font-size-l;
+            }
+            .hero_subtitle {
+              padding: 0 3rem;
+              font-size: $font-size-m;
+              width: 80%;
+              margin-bottom: 4rem;
+              }
+        }
+      }
+
+    }
+  @media screen and (max-width: 460px) {
+  
+    .hero { 
+      width: 100%;
+      .hero_wrapper {
+
+        .hero_logo {
+          transform: scale(0.85);
+        }
+      
+        > .hero_pretitle {
+          margin-top: 10vh;
+          font-size: $font-size-m;
+        }
+        .hero_title {
+          padding: 2rem;
+          font-size: $font-size-l;
+        }
+      
+          .hero_subtitle {
+          padding: 0 2rem;
+          font-size: $font-size-base;
+          width: 80%;
+          margin-bottom: 6rem;
+          }
+      }
+    }
+    }
+  @media screen and (max-width: 360px) {
+  
+    .hero { 
+      padding: 0;
+      width: 100%;
+      .hero_wrapper {
+      
+        > .hero_pretitle {
+          margin-top: 10vh;
+          font-size: $font-size-base;
+        }
+        .hero_title {
+          padding: 2rem;
+          font-size: $font-size-ml;
+        }
+      
+          .hero_subtitle {
+          padding: 0 1rem;
+          font-size: $font-size-base;
+          width: 100%;
+          }
+      }
+    }
+    }

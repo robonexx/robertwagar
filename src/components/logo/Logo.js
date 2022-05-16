@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './logo.scss';
-import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils';
-
 const Logo = () => {
   return (
       <motion.div className='logo'

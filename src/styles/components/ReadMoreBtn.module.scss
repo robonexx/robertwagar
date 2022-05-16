@@ -1,0 +1,69 @@
+@use '../base/' as *;
+
+/* ========== Button Special ========== */
+.btn_special {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    border: 0;
+    background: transparent;
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    border: 1px solid $color-client-3;
+    border-radius: 25px;
+    margin: 1rem 0;
+    overflow: hidden;
+    font-family: $font-base;
+  }
+
+  
+  .btn_special:hover::after, .btn_special:focus::after {
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.4);   
+
+  }
+  
+  .btn_special::after {
+    content: '';
+    position: absolute;
+    background-color: $color-client-1;
+    opacity: 0;
+    height: 1.5rem;
+    width: 100%;
+    top: 1rem;
+    left: 0;
+    z-index: -1;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transform-origin: bottom;
+    transition: all 0.3s cubic-bezier(0.45, 1.43, 0.72, 1.18);
+    
+  }
+
+  .btn_special:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+
+    
+}
+  
+.btn_special:active::after {
+    transform: translateY(0px);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+button.btn_special{
+
+    > a {
+        text-decoration: none;
+        color: $color-client-2;
+        font-weight: $font-bold;
+    }
+} 

@@ -1,0 +1,55 @@
+// colors client
+$color-1: #ffffff;
+$color-2: #e4e4df;
+$color-3: #b9b4b1;
+$color-4: #63615d;
+$color-5: #2a2622;
+$color-bg-dark: #121212;
+$color-bg-dark-alt: #1d1b1b;
+$color-bg-light: #efefef;
+$color-bg-light-alt: #fff;
+$color-text-primary: #f8f8f8;
+$color-text-secondary: #121212;
+
+
+// colors client
+$color-client-1: #fff;
+$color-client-2: #2a2622;
+$color-client-3: #000;
+
+
+
+// color scrollbar
+$color-scrollbar-bg: $color-5;
+$color-li-arrow: #61505A;
+
+
+// color gradients
+$color-gradient-gold: linear-gradient(120deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+$color-gradient-purplish: linear-gradient(120deg, #574650, #E6D5DF, #61505A, #DDCCD6, #6F5E68);
+$color-gradient-black: linear-gradient(120deg, $color-5, $color-text-secondary, $color-bg-dark, $color-5, $color-text-secondary);
+$color-gradient-white: linear-gradient(120deg, $color-1, $color-2, $color-1, $color-3, $color-2);
+
+$color-black: #000;
+$color-white: #fff;
+
+$color-bg: #121212;
+
+// dimmed
+$color-dimmed: #888;
+
+// color scrollbar
+$color-scrollbar-bg: color-client-2;
+$color-li-arrow: #61505A;
+
+$box-shadow: rgba(0,0,0,0.335);
+
+// cards
+$color-card-bg: #000;
+
+// svg colors
+$color-lockerlegends-yellow: #ffc13b;
+$color-lockerlegends-orange: #ff6e40;
+$color-lockerlegends-dodgers-blue: #005A9C;
+$color-lockerlegends-dodgers-red: #EF3E42;
+$color-lockerlegends-dodgers-gray: #A5ACAF;

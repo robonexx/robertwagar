@@ -1,25 +1,29 @@
-$color-gradient: linear-gradient(120deg, black, #282828, #121212, #1b1b1b, #101010);
+@use '/src/styles/base/' as *;
+
+$color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #ffffff, #000000);
 
 .App {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   text-align: center;
 }
 
 .wrapper {
-  margin-top: 400px;
+  margin-top: 100px;
   width: 100%;
   height: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   h1 {
-    position: absolute;
-
+    transform: rotate(-10deg);
+    top: 100px;
+    position: relative;
     font-size: 12rem;
-    background-image: $color-gradient;
+    background-image: $color-gradient-white;
           background-size: 100%;
           -webkit-background-clip: text;
           -moz-background-clip: text;
@@ -27,60 +31,57 @@ $color-gradient: linear-gradient(120deg, black, #282828, #121212, #1b1b1b, #1010
           -moz-text-fill-color: transparent;
           text-transform: uppercase;
           font-family: 'Roboto', sans-serif;
-          filter: drop-shadow(-1px 2px 1px rgb(255, 0, 0)) drop-shadow(0 4px 2px rgb(0, 0, 0)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
+          filter: drop-shadow(-1px 2px 1px rgb(119, 119, 119)) drop-shadow(0 4px 2px rgb(0, 0, 0)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
           cursor: pointer;
           overflow: hidden;
           z-index: 10;
 
           @media screen and (max-width: 768px) {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
+            margin: 5rem 0;
           }
   }
 }
 
 .text-animation {
-  position: relative;
-  display: inline-flex;
-  font-size: 12rem;
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        filter: drop-shadow(-1px 2px 1px rgb(255, 0, 0)) drop-shadow(0 4px 2px rgb(0, 0, 0)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
-        cursor: pointer;
-        overflow: hidden;
-        z-index: 1;
+ 
+  transform: rotate(-10deg) translateY(50px);
+    position: relative;
+    display: flex;
+    font-size: 12rem;        
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
 
         @media screen and (max-width: 768px) {
           font-size: 4.5rem;
         }
 
 
-        &.first {
-          margin-bottom: 10rem;
-          background-image: $color-gradient;
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        -moz-text-fill-color: transparent;
-          filter: drop-shadow(-1px 2px 5px rgb(241, 23, 7)) drop-shadow(0 4px 2px rgb(0, 0, 0)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
-          
+        .first {     
+          padding-top: 0rem;    
+            padding-right: 2rem;
         }
-        &.last {
-          background-image: $color-gradient;
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        -moz-text-fill-color: transparent;
-          padding-right: 2rem;
-          filter: drop-shadow(-1px 2px 5px rgb(136, 7, 7)) drop-shadow(0 4px 2px rgb(0, 0, 0)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
+        .last {
+            padding-top: 10rem;
+            padding-right: 2rem;
+            @media screen and (max-width: 768px) {
+              padding-top: 3rem;
+            }
         }
         span {
           display: flex;
           position: relative;
-          font-weight: 800;
-          text-shadow: 0px 2px 10px rgba(238, 7, 7, 0.144);
-
+          font-weight: 800;   
+          background-image: $color-gradient-black;
+          background-size: 100%;
+          -webkit-background-clip: text;
+          -moz-background-clip: text;
+          -webkit-text-fill-color: transparent; 
+          -moz-text-fill-color: transparent;
+          text-transform: uppercase;
+          font-family: 'Roboto', sans-serif;
+          filter: drop-shadow(-1px -1px 1px rgb(255, 255, 255)) drop-shadow(3px 3px 5px rgba(10, 10, 10, 0.541)) drop-shadow(0 0 20px rgba(17, 17, 17, 0.233));
         }
 
 }
@@ -91,7 +92,7 @@ $color-gradient: linear-gradient(120deg, black, #282828, #121212, #1b1b1b, #1010
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
 }
 
 .image_bg{
@@ -118,7 +119,7 @@ $color-gradient: linear-gradient(120deg, black, #282828, #121212, #1b1b1b, #1010
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  z-index: 0;
+  z-index: 1;
 }
 
 .image svg {
@@ -130,17 +131,17 @@ $color-gradient: linear-gradient(120deg, black, #282828, #121212, #1b1b1b, #1010
 }
  
 path:nth-child(4) {
-  fill: rgb(0, 0, 0);
+  fill: $color-2;
 }
 path:nth-child(1) {
-  fill: rgb(12, 12, 12);
-  stroke: red;
+  fill: $color-3;
+  stroke: $color-5;
   stroke-width: 1px;
 }
 path:nth-child(2) {
-  fill: rgb(22, 22, 22);
+  fill: $color-4;
 }
 path:nth-child(3) {
-  fill: rgb(29, 29, 29);
+  fill: $color-1;
 }
 
