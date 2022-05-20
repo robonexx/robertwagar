@@ -146,6 +146,14 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
 
 }
 
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 2;
+}
+
 .youknow {
   position: fixed;
  top: auto;

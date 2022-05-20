@@ -6,9 +6,9 @@ const Logo = () => {
   return (
     <motion.div
       className='logo'
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 1 }}
+      initial={{ opacity: 0, x: -200 }}
+      animate={{ opacity: 1, x: 0}}
+      transition={{ duration: 0.2 }}
     >
       <a href='/'></a>
       <svg viewBox='0 0 171 164' xmlns='http://www.w3.org/2000/svg'>
