@@ -37,7 +37,13 @@
   width: 100%;
   height: 46px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  
+&:last-child {
+  padding-right: 2rem;
+}
 
 }
 
@@ -49,6 +55,7 @@
   padding: 0 1.25rem;
   height: 100%;
   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+overflow-x: hidden;
 
 }
 

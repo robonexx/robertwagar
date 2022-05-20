@@ -10,13 +10,36 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
 
 .wrapper {
   margin-top: 100px;
-  width: 100%;
+  width: inherit;
   height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  
+.joke {
+  width: inherit;
+  height: 300px;
+  z-index: 100;
+  p {
+    position: fixed;
+    top: 8rem;
+    left: 10%;
+    bottom: 0;
+    right: auto;
+  }
+  }
+
+  .wait {
+    position: fixed;
+    top: 8rem;
+    left: 50%;
+    bottom: 0;
+    right: auto;
+    z-index: 100;
+  }
 
   p {
     color: white;
@@ -29,10 +52,10 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
   }
 
   h1 {
-    transform: rotate(-10deg);
-    top: 100px;
-    position: relative;
-    font-size: 10rem;
+    margin-top: 10rem;
+    padding: 2rem 0;
+    position: absolute;
+    font-size: 3rem;
     background-image: $color-gradient-white;
           background-size: 100%;
           -webkit-background-clip: text;
@@ -45,22 +68,14 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
           cursor: pointer;
           overflow: hidden;
           z-index: 10;
-
-          @media screen and (max-width: 768px) {
-            font-size: 3.5rem;
-            margin: 5rem 0;
-          }
-          @media screen and (max-width: 420px) {
-            font-size: 3rem;
-           
-          }
   }
+
 }
 
 .text-animation {
- 
   transform: rotate(-10deg) translateY(50px);
-    position: relative;
+    position: fixed;
+    top: 40%;
     display: flex;
     font-size: 8rem;        
     cursor: pointer;
@@ -131,6 +146,17 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
 
 }
 
+.youknow {
+  position: fixed;
+ top: auto;
+ background-color: rgb(240, 71, 71);
+  right: 5%;
+  padding: 0 0.5rem 0 3rem;
+  bottom: 20%;
+  left: auto;
+  z-index: 100;
+}
+
 .bg {
   position: absolute;
   top: 0;
@@ -189,4 +215,3 @@ path:nth-child(2) {
 path:nth-child(3) {
   fill: $color-1;
 }
-

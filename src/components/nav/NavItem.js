@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import styles from '../../styles/components/Nav.module.scss';
 
 export default function NavItem(props) {
@@ -26,11 +26,17 @@ export default function NavItem(props) {
   };
 
   return (
-    <li
+    <motion.li
       className={styles.nav_item}
       key={props.title}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{
+        opacity: 1,
+        scale: [0.3, 1.1, 1],
+        translateY: [0, 10, 20, 0],
+      y: 0}}
     >
       <a
         href={props.url}
@@ -42,6 +48,6 @@ export default function NavItem(props) {
       </a>
       {dropdown && props.children}
       {click && props.children}
-    </li>
+    </motion.li>
   );
 }
