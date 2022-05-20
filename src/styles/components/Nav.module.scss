@@ -11,6 +11,7 @@
   background-color: rgba(0, 0, 0, 0.267);
   overflow-x: hidden;
   transition: all 0.4s linear;
+  
 }
 
 
@@ -177,7 +178,7 @@ a .mobile {
     transform: translateX(110%);
     opacity: 0;
     transition: all 0.5s ease;
-    z-index: 100;
+    z-index: 1000;
 
     .nav_item:nth-child(1) {
       margin-top: 10rem;
@@ -213,7 +214,7 @@ a .mobile {
     background: $color-bg;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 100;
+    z-index: 1000;
 
   }
   .nav_item a:before {

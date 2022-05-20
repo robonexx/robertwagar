@@ -45,6 +45,9 @@ const Searching = {
       staggerDirection: 1,
     },
   },
+  exit: {
+    opacity: 0,
+  }
 };
 const letter = {
   initial: {
@@ -97,7 +100,7 @@ function App() {
           <motion.div
             initial='initial'
             animate='animate'
-            exit='exit'
+           
             className='joke'
           >
             <motion.p variants={Searching}>
@@ -119,6 +122,7 @@ function App() {
             className='wait'
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
+           
             transition={{ delay: 2, duration: 0.3 }}
           >
             wait...
@@ -133,7 +137,7 @@ function App() {
           <motion.div
             initial='initial'
             animate='animate'
-            exit='exit'
+           
             className='text-animation'
           >
             <motion.span className='first' variants={firstWord}>

@@ -9,6 +9,7 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
 }
 
 .wrapper {
+  position: relative;
   margin-top: 100px;
   width: inherit;
   height: 100%;
@@ -22,7 +23,7 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
 .joke {
   width: inherit;
   height: 300px;
-  z-index: 100;
+  z-index: 10;
   p {
     position: fixed;
     top: 8rem;
@@ -38,7 +39,7 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
     left: 50%;
     bottom: 0;
     right: auto;
-    z-index: 100;
+    z-index: 10;
   }
 
   p {
