@@ -52,9 +52,9 @@ $color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #fff
   }
 
   h1 {
-    margin-top: 10rem;
     padding: 2rem 0;
-    position: absolute;
+    position: fixed;
+    top: 35%;
     font-size: 3rem;
     background-image: $color-gradient-white;
           background-size: 100%;
