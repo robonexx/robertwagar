@@ -1,7 +1,10 @@
 import './App.scss';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
 import { motion, AnimatePresence } from 'framer-motion';
-import Rob1 from './Rob1';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+/* import Rob1 from './Rob1';
 import RobBg from './RobBg';
 
 const transition = { duration: 0.3, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -47,7 +50,7 @@ const Searching = {
   },
   exit: {
     opacity: 0,
-  }
+  },
 };
 const letter = {
   initial: {
@@ -83,13 +86,17 @@ const letter3 = {
     transition: { duration: 1, ...transition },
   },
 };
-
+ */
 function App() {
   return (
     <motion.div className='App'>
       <AnimatePresence exitBeforeEnter>
         <Header />
-        <motion.div className='wrapper'>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
+       {/*  <motion.div className='wrapper'>
           <motion.div
             className='overlay'
             initial={{ opacity: 1 }}
@@ -97,12 +104,7 @@ function App() {
             exit={{ opacity: 0 }}
             transition={{ delay: 2.5, duration: 1 }}
           ></motion.div>
-          <motion.div
-            initial='initial'
-            animate='animate'
-           
-            className='joke'
-          >
+          <motion.div initial='initial' animate='animate' className='joke'>
             <motion.p variants={Searching}>
               <motion.span variants={letter3}>s</motion.span>
               <motion.span variants={letter3}>e</motion.span>
@@ -122,22 +124,21 @@ function App() {
             className='wait'
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
-           
-            transition={{ delay: 2, duration: 0.3 }}
+            exit={{ opacity: 0 }}
+            transition={{ delay: 2, duration: 0.6 }}
           >
             wait...
           </motion.p>
           <motion.h1
             initial={{ x: 0, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 2, duration: 2 }}
+            transition={{ delay: 2.5, duration: 4 }}
           >
             <motion.span>GOOGLE</motion.span> <motion.span>PRO?!</motion.span>
           </motion.h1>
           <motion.div
             initial='initial'
             animate='animate'
-           
             className='text-animation'
           >
             <motion.span className='first' variants={firstWord}>
@@ -176,7 +177,7 @@ function App() {
           transition={{ delay: 4, duration: 0.6 }}
         >
           if You diden't know, now You know
-        </motion.p>
+        </motion.p> */}
       </AnimatePresence>
     </motion.div>
   );

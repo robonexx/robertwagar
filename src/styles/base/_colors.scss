@@ -30,6 +30,8 @@ $color-gradient-purplish: linear-gradient(120deg, #574650, #E6D5DF, #61505A, #DD
 $color-gradient-black: linear-gradient(120deg, $color-5, $color-text-secondary, $color-bg-dark, $color-5, $color-text-secondary);
 $color-gradient-white: linear-gradient(120deg, $color-1, $color-2, $color-1, $color-3, $color-2);
 
+$color-gradient: linear-gradient(120deg, rgb(49, 49, 49), #b4b4b4, #9b9b9b, #ffffff, #000000);
+
 $color-black: #000;
 $color-white: #fff;
 

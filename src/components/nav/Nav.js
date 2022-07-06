@@ -42,7 +42,7 @@ export default function Nav(props) {
   }, []);
 
   return (
-    <nav className={styles.navbar} ref={navRef}>
+    <nav className={styles.navbar} ref={navRef}> 
       <button className={styles.menu_icon} onClick={handleClick}>
         <NavBtn navActive={navActive} />
       </button>

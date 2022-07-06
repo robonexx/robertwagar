@@ -10,7 +10,7 @@ const pathVariants = {
   visible: {
     pathLength: 1,
     transition: {
-      delay: 1.8,
+      delay: 3,
       duration: 4,
       ease: 'easeInOut',
     },
