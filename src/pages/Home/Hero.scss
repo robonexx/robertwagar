@@ -1,0 +1,226 @@
+@use '../../styles/base/index' as *;
+
+.wrapper {
+    position: relative;
+    width: inherit;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    
+  .searching {
+    width: inherit;
+    height: 300px;
+    z-index: 1;
+    p {
+      position: absolute;
+      top: 8rem;
+      left: 10%;
+      bottom: 0;
+      right: auto;
+    }
+    }
+  
+    .wait {
+      position: absolute;
+      top: 8rem;
+      left: 50%;
+      bottom: 0;
+      right: auto;
+      z-index: 1;
+    }
+  
+    p {
+      color: white;
+      @media screen and (max-width: 768px) {
+        position: fixed;
+        top: 5rem;
+        font-size: 1.2rem;
+        margin: 5rem 0 0;
+      }
+    }
+  
+    h1 {
+      padding: 2rem 0;
+      position: absolute;
+      top: 35%;
+      font-size: 3rem;
+      background-image: $color-gradient-white;
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            text-transform: uppercase;
+            
+            filter: drop-shadow(-1px 2px 1px rgb(119, 119, 119)) drop-shadow(0 4px 2px rgba(0, 0, 0, 0.952)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.137));
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 10;
+
+            > .google_pro {
+                font-size: 6rem;
+                font-family: $font-alt;
+            }
+    }
+  
+  }
+  
+  .text-animation {
+    transform: rotate(-10deg) translateY(50px);
+      position: absolute;
+      top: 40%;
+      display: flex;
+      font-size: 8rem;  
+            
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 10;
+  
+          @media screen and (max-width: 768px) {
+            font-size: 3.5rem;
+          }
+  
+          @media screen and (max-width: 420px) {
+            font-size: 3rem;
+           
+          }
+  
+  
+          .first {     
+            padding-top: 0rem;    
+              padding-right: 2rem;
+              @media screen and (max-width: 768px) {
+                padding-top: 4rem;
+                padding-right: 0rem;
+              }
+          }
+          .last {
+              padding-top: 10rem;
+              padding-right: 2rem;
+              @media screen and (max-width: 768px) {
+                padding-top: 3rem;
+                padding-right: 2rem;
+                &:nth-child(3n -1) {
+                  font-size: 2.5rem;
+                 }
+              }
+          }
+          span {
+            display: flex;
+            position: relative;
+            font-weight: 800;   
+            background-image: $color-gradient-black;
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            text-transform: uppercase;
+            font-family: $font-alt;
+            filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, 0.418)) drop-shadow(3px 3px 5px rgba(10, 10, 10, 0.24)) drop-shadow(0 0 10px rgba(17, 17, 17, 0.137));
+  
+            @media screen and (max-width: 768px) {
+              letter-spacing: -.4rem;
+  
+              &:nth-child(3n + 2) {
+                font-size: 3.5rem;
+               }
+  
+            }
+  
+            @media screen and (max-width: 420px) {
+              font-size: 3rem;
+  
+              &:nth-child(3n + 2) {
+                font-size: 2.5rem;
+               }
+             
+            }
+          }
+  
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 2;
+  }
+  
+  .youknow {
+    position: absolute;
+    top: auto;
+    background-color: rgba(216, 216, 212, 0.872);
+    right: 5%;
+    padding: 0.2rem 0.75rem;
+    bottom: 20%;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    left: auto;
+    z-index: 100;
+  }
+  
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  
+  .image_bg{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .image_bg svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .image #svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+   
+  path:nth-child(4) {
+    fill: $color-2;
+  }
+  path:nth-child(1) {
+    fill: $color-3;
+    stroke: $color-5;
+    stroke-width: 1px;
+  }
+  path:nth-child(2) {
+    fill: $color-4;
+  }
+  path:nth-child(3) {
+    fill: $color-1;
+  }
+  

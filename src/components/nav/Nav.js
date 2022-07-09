@@ -12,7 +12,6 @@ export default function Nav(props) {
     setClick(!click);
     setNavActive(!click);
   };
-  /* const handleClick = () => setClick(!click); */
 
   const navRef = useRef();
 
@@ -24,12 +23,12 @@ export default function Nav(props) {
         let currentScrollPos = window.pageYOffset;
 
         if (prevScrollpos > currentScrollPos) {
-          navRef.current.classList.add(`${styles.navbar && styles.bgorange}`);
+          navRef.current.classList.add(`${styles.navbar && styles.bgscroll}`);
           navRef.current.classList.remove(`${styles.hide}`);
         } else {
           navRef.current.classList.add(`${styles.hide}`);
           navRef.current.classList.remove(
-            `${styles.navbar && styles.bgorange}`
+            `${styles.navbar && styles.bgscroll}`
           );
         }
         prevScrollpos = currentScrollPos;
@@ -42,8 +41,8 @@ export default function Nav(props) {
   }, []);
 
   return (
-    <nav className={styles.navbar} ref={navRef}> 
-      <button className={styles.menu_icon} onClick={handleClick}>
+    <nav className={styles.navbar} ref={navRef}>
+      <button className={styles.menu_btn} onClick={handleClick}>
         <NavBtn navActive={navActive} />
       </button>
       <ul

@@ -25,6 +25,13 @@ export default function NavItem(props) {
     setClick(false);
   };
 
+  function splitChar(input) {
+    let word = input;
+    const wordArr = word.split('');
+    return wordArr;
+  }
+  let newTitle = splitChar(props.title);
+
   return (
     <motion.li
       className={styles.nav_item}
@@ -38,16 +45,21 @@ export default function NavItem(props) {
         translateY: [0, 10, 20, 0],
       y: 0}}
     >
+      <svg className={styles.svg} viewBox="0 0 54 54">
+        <circle className={styles.anicircle} cx="15" cy="27" r="10"/>
+</svg>
       <a
         href={props.url}
         onClick={closeMobileMenu}
         className={styles.nav_links}
       >
-        <span className={styles.link_icon}>{props.icon}</span>
-        <span className={styles.link_title}>{props.title}</span>
+        
+        <span>{ props.title }</span>
+       {/*  {console.log(newTitle)} */}
       </a>
       {dropdown && props.children}
       {click && props.children}
     </motion.li>
   );
 }
+

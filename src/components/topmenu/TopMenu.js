@@ -1,6 +1,5 @@
 import Logo from '../logo/Logo';
 import ContactBtn from '../contactBtn/ContactBtn';
-import { GiVibratingSmartphone } from 'react-icons/gi';
 
 // styles
 import styles from '../../styles/components/TopMenu.module.scss';
@@ -12,12 +11,7 @@ export default function TopMenu() {
       <div className={styles.enterKre}>
         <Kreative />
       </div>
-
-      <ContactBtn
-        title='Contact'
-        icon={<GiVibratingSmartphone />}
-        url='/contact'
-      />
+      <ContactBtn title='Contact' url='/contact' />
     </div>
   );
 }

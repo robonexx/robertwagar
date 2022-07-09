@@ -5,10 +5,9 @@
   padding: 0;
   width: 100%;
   z-index: 100;
-  font-family: $font-base;
   display: block;
   font-size: 1.2rem;
-  background-color: rgba(0, 0, 0, 0.267);
+  background-color: rgba(0, 0, 0, 0.668);
   overflow-x: hidden;
   transition: all 0.4s linear;
   
@@ -24,10 +23,13 @@
   transition: all 0.4s ease;
 }
 
-.bgorange {
+.bgscroll {
   transition: 0.3s ease;
-  background-color: $color-client-2;
- 
+  background: $color-gradient-gold;
+  & .nav_links {
+    color: #121212;
+    text-shadow: 2px 2px 1px black;
+  }
 }
 
 .nav_menu {
@@ -38,12 +40,13 @@
   width: 100%;
   height: 46px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  
   overflow: hidden;
 
   
 &:last-child {
-  padding-right: 2rem;
+  padding-right: 4rem;
 }
 
 }
@@ -53,14 +56,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
   height: 100%;
   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-overflow-x: hidden;
-
+  overflow: hidden;
+  z-index: 100;
+  cursor: pointer;
 }
 
-.link_icon {
+/* .link_icon {
   --button-size: calc(60px * 0.8);
   width: 42px;
   height: 42px;
@@ -71,7 +75,7 @@ overflow-x: hidden;
    svg path {
     fill: $color-5;
   }
-}
+} */
 
 .nav_icon {
   color: $color-white;
@@ -81,18 +85,28 @@ a .mobile {
   display: none;
 }
 
-.menu_icon {
+.menu_btn {
   display: none;
   cursor: pointer;
 }
 
 .nav_links {
-  font-size: $font-size-base;
+  position: relative;
+  font-size: $font-size-ml;
   font-weight: 400;
   color: $color-1;
-  font-family: $font-base;
   text-transform: uppercase;
-  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+  
+
+  > span {
+    position: relative;
+    font-family: $font-nav;
+    text-shadow: 1px 1px 1px black;
+    pointer-events: none;
+    
+  }
   
   @media screen and (max-width: 1440px){
     font-size: 1rem;
@@ -100,13 +114,32 @@ a .mobile {
 }
 
 
+.svg {
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 
+  > .anicircle {
+    fill: none;
+    stroke-width: 1px;
+    stroke: white;
+    stroke-dasharray: 300 300;
+    stroke-dashoffset: 300;
+    transition: stroke-dashoffset 1000ms linear;
+    pointer-events: none;
+  }
+}
 
 .nav_item:hover {
-  background: $color-3;
+  background: transparent;
 
-  .nav_links {
-    color: $color-client-3;
+ & .nav_links {
+    color: goldenrod;
+  }
+  & .anicircle {
+    stroke-dashoffset: 0;
   }
 
   .link_icon {
@@ -136,8 +169,8 @@ a .mobile {
     left: auto;
     
   }
-  .menu_icon {
-    bottom: 2rem;
+  .menu_btn {
+    top: 4rem;
     right: 2rem;
     position: fixed;
     display: flex;
@@ -158,7 +191,9 @@ a .mobile {
     
   }
 
-  
+  .svg {
+    visibility: hidden;
+  }
   .nav_icon {
     color: $color-white;
     font-size: 2rem;
@@ -194,9 +229,6 @@ a .mobile {
       display: block;
     }
 
-    .nav_links:hover {
-      background-color: $color-client-3;
-    }
   }
 
   .nav_menu.active {
@@ -229,13 +261,11 @@ a .mobile {
        (min-width: 769px) and 
        (max-width: 1024px) and 
        (min-resolution: 192dpi) {
-        .menu_icon {
-          bottom: 8rem;
+        .menu_btn {
+          top: 8rem;
           right: 2rem;
-          
-      
           &:hover {
-            background-color: darken($color-client-2, 5%);
+            background-color: lighten($color-client-2, 5%);
           }
           
         }
