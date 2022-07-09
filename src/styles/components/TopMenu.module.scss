@@ -35,6 +35,10 @@
 
 
 .kreative {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform:translate(-50%);
     animation: kreativeFill;
     transition-delay: 2s;
     transition: all 2s ease-out;
