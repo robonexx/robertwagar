@@ -16,10 +16,10 @@ export default function Header() {
       <TopMenu />
       <Nav>
         <NavItem title='home' /* icon={<AiOutlineHome />} */ url='/' />
-        <NavItem title='about' /* icon={<GiDodging />} */ url='/about' />
-        <NavItem title='work' /* icon={<GiTargeted />} */ url='/work'></NavItem>
-        <NavItem title='dev' /* icon={<GiSkills />} */ url='/dev' />
+        <NavItem title='work' /* icon={<GiTargeted />} */ url='#work'></NavItem>
+        <NavItem title='code' /* icon={<GiSkills />} */ url='/dev' />
         <NavItem title='dance' /* icon={<GiTechnoHeart />} */ url='/dance' />
+        <NavItem title='about' /* icon={<GiDodging />} */ url='/about' />
       </Nav>
     </div>
   );

@@ -9,7 +9,6 @@
   font-size: 1.2rem;
   background-color: rgba(0, 0, 0, 0.668);
   overflow-x: hidden;
-  transition: all 0.4s linear;
   
 }
 
@@ -41,8 +40,8 @@
   height: 46px;
   align-items: center;
   justify-content: center;
-  
   overflow: hidden;
+  transition: all 0.4s ease;
 
   
 &:last-child {
@@ -97,7 +96,6 @@ a .mobile {
   color: $color-1;
   text-transform: uppercase;
   overflow: hidden;
-  pointer-events: none;
   
 
   > span {

@@ -9,7 +9,7 @@ import './Work.scss';
 export default function Work() {
   console.log(Projects);
   return (
-    <div className='work'>
+    <div className='work' id="work">
       <h1 style={{ marginTop: '400px' }}>Work</h1>
       {Projects.map(({ title, url, repo, figma, coLab, id }) => (
         <div key={id}>
