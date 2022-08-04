@@ -17,7 +17,7 @@
   z-index: 40;
   border-bottom: 10px solid $color-client-2;
   position: fixed;
-  transform: translateY(-54px);
+  transform: translateY(-105px);
   transition: all 0.4s ease;
 }
 
@@ -25,7 +25,7 @@
   transition: 0.3s ease;
   background: $color-gradient;
   & .nav_links {
-    color: #121212;
+    color: #555555;
     text-shadow: 2px 2px 1px black;
   }
 }
@@ -227,7 +227,7 @@ a .mobile {
 
   .nav_menu.active {
     position: fixed;
-    top: 54px;
+    top: 100px;
     right: 0;
     left: 0;
     width: 100%;

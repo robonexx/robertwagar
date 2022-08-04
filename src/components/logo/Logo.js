@@ -28,12 +28,12 @@ const pathVariants = {
   visible: {
     pathLength: 1,
     strokeWidth: 2,
-    stroke: 'black',
+    stroke: '#f8f8f8',
     transition: {
       duration: 1, when: "afterChildren", staggerChildren: 0.2,
       ease: 'easeInOut',
     },
-    fill: ['#28282800', '#28282800','#28282800','#28282800','#28282826', '#2828284d', '#28282880', '#282828bf', '#000'],
+    fill: ['#fafafa00', '#fafafa00','#fafafa00','#fafafa00','#fafafa26', '#fafafa4d', '#fafafa80', '#fafafabf', '#fafafa'],
   },
 };
 
