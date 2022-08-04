@@ -1,15 +1,13 @@
-import React from 'react';
-import Hero from './Hero';
-import Work from './Work';
+import React from 'react'
 
 // styles
-import './Work.scss'
+import './Home.scss'
+import HomeHero from './HomeHero'
 
-export default function Home() {
+export default function Home({lights}) {
   return (
     <div className='home'>
-      <Hero />
-      <Work />
+        <HomeHero lights={lights} />
     </div>
-  );
+  )
 }

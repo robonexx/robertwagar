@@ -25,12 +25,12 @@ export default function NavItem(props) {
     setClick(false);
   };
 
-  function splitChar(input) {
+  /* function splitChar(input) {
     let word = input;
     const wordArr = word.split('');
     return wordArr;
   }
-  let newTitle = splitChar(props.title);
+  let newTitle = splitChar(props.title); */
 
   return (
     <motion.li
