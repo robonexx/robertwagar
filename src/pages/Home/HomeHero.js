@@ -6,34 +6,35 @@ import './HomeHero.scss'
 export default function HomeHero({lights}) {
     const dayRef = useRef();
     const [daytime, setDaytime] = useState();
+    const [open, setOpen] = useState(false)
 
     const d = new Date()
     const hoursNow = d.getHours()
+    /* const hoursNow = 18 */
+
        useEffect(() => {
        
-
-    let whatTime;
-        whatTime = hoursNow
-        if(whatTime >= 6 && whatTime < 10){
+        if(hoursNow >= 6 && hoursNow < 10){
             setDaytime('morning')
         }
-        if(whatTime >= 10 && whatTime < 17){
+        if(hoursNow >= 10 && hoursNow < 17){
             setDaytime('day')
         }
-        if(whatTime >=17 && whatTime < 22){
+        if(hoursNow >=17 && hoursNow < 22){
             setDaytime('evening')
         }
-        if(whatTime >= 22 && whatTime < 6){
+        if(hoursNow >= 22 || hoursNow < 6){
             setDaytime('night')
         }
-        console.log(whatTime)
+        if(hoursNow > 8 && hoursNow < 17) {
+            setOpen(true)
+        }
+        console.log(hoursNow)
     }, [hoursNow])
-
-    
 
   return (
     <div className={`house ${daytime}`} ref={dayRef}>
-        <h2 className={!lights ? 'text_light' : 'text_dark'}>{!lights ? (`Hi there! How may I be of service?`) : 'Sorry buddy, Office is closed.'} </h2>
+        <h2 className={open ? 'text_light' : 'text_dark'}>{open ? (`Hi there! How may I be of service?`) : ('Sorry, we are closed, feel free to send us an Email.')} </h2>
         <div className={lights ? 'overlay' : ''}></div>
         <svg width="160" height="99" viewBox="0 0 160 99" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="2.5" y="3.5" width="139" height="95" fill="#372517" stroke="black"/>

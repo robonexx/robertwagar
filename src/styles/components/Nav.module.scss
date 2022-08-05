@@ -174,13 +174,13 @@ a .mobile {
     cursor: pointer;
     padding: 1.25rem 0.25rem;
     border-radius: 50%;
-    background-color: $color-yellow;
+    background-color: $color-2;
     outline: none;
     border: none;
     box-shadow: 0 0 2px 2px rgba(8, 8, 8, 0.205);
 
     &:hover {
-      background-color: darken($color-yellow, 8%);
+      background-color: lighten($color-2, 10%);
     }
     
   }
