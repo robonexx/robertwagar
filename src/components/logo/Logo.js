@@ -30,7 +30,7 @@ const pathVariants = {
     strokeWidth: 2,
     stroke: '#f8f8f8',
     transition: {
-      duration: 1, delay: 1.5, when: "afterChildren", staggerChildren: 0.4,
+      duration: 1, delay: 0.2, when: "afterChildren", staggerChildren: 0.4,
       ease: 'easeInOut',
     },
     fill: ['#fafafa00', '#fafafa00','#fafafa00','#fafafa00','#fafafa26', '#fafafa4d', '#fafafa80', '#fafafabf', '#fafafa'],
