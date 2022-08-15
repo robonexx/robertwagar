@@ -6,6 +6,8 @@ export default function NavItem(props) {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
+  const { children, title, url, icon, i } = props;
+
   const onMouseEnter = () => {
     if (window.innerWidth < 300) {
       setDropdown(false);
@@ -25,40 +27,29 @@ export default function NavItem(props) {
     setClick(false);
   };
 
-  /* function splitChar(input) {
-    let word = input;
-    const wordArr = word.split('');
-    return wordArr;
-  }
-  let newTitle = splitChar(props.title); */
-
   return (
     <motion.li
       className={styles.nav_item}
-      key={props.title}
+      key={i}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      initial={{ opacity: 0, y: -50 }}
-      animate={{
-        opacity: 1,
-        scale: [0.3, 1.1, 1],
-        translateY: [0, 10, 20, 0],
-      y: 0}}
+      initial={{ opacity: 0, y: i % 2 === 0 ? -100 : 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: i * 0.1 }} 
     >
       <svg className={styles.svg} viewBox="0 0 54 54">
         <circle className={styles.anicircle} cx="15" cy="27" r="10"/>
-</svg>
+      </svg>
       <a
-        href={props.url}
+        href={url}
         onClick={closeMobileMenu}
         className={styles.nav_links}
       >
-        
-        <span>{ props.title }</span>
-       {/*  {console.log(newTitle)} */}
+        <span>{icon}</span>
+        <span>{ title }</span>
       </a>
-      {dropdown && props.children}
-      {click && props.children}
+      {dropdown && children}
+      {click && children}
     </motion.li>
   );
 }

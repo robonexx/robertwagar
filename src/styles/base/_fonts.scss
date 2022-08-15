@@ -1,17 +1,10 @@
 @use '../abstracts' as *;
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fredericka+the+Great&family=Inter:wght@100;400;900&family=Monoton&family=Montserrat+Subrayada:wght@400;700&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
 
-/* 
-font-family: 'Audiowide', cursive;
-font-family: 'Fredericka the Great', cursive;
-font-family: 'Inter', sans-serif;
-font-family: 'Monoton', cursive;
-font-family: 'Montserrat Subrayada', sans-serif;
-font-family: 'Splash', cursive;
- */
-$font-base: 'Inter', sans-serif;
-$font-alt:  'Audiowide', cursive;
-$font-nav: 'Montserrat Subrayada', sans-serif;
+$font-base: 'Montserrat', sans-serif;
+$font-alt:  'Darker Grotesque', sans-serif;
+$font-nav: 'Montserrat', sans-serif;
 $font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 

@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Theme from './components/theme/Theme';
+import Contact from './pages/Contact/Contact';
+/* import Landing from './pages/Landing/Landing'; */
 
 function App() {
   const [lights, setLights] = useState(false)
@@ -13,7 +15,8 @@ function App() {
     
       const lightsOnOff = () => {
           setLights(!lights)
-          lights ? bgRef.current.style.backgroundColor = '#fafafa' : bgRef.current.style.backgroundColor = '#1b1b1b'
+          /* going to change this to choose dark / ligth mode */
+          lights ? bgRef.current.style.backgroundColor = '#F2E5D7' : bgRef.current.style.backgroundColor = '#282422'
       }
   return (
     <motion.div className='App' ref={bgRef}>
@@ -21,7 +24,9 @@ function App() {
         <Theme lights={lights} setLights={setLights} lightsOnOff={lightsOnOff}/>
         <Routes>
           <Route path="/" element={<Home lights={lights}/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="about" element={<About/>}/>
+          <Route path="contact" element={<Contact lights={lights}/>}/>
+          {/* <Route path="/landing" element={<Landing/>}/> */}
         </Routes>
     </motion.div>
   );

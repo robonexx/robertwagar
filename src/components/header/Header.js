@@ -1,5 +1,6 @@
 import Nav from '../nav/Nav';
 import NavItem from '..//nav/NavItem';
+import { navItems } from '../../assets/data/navItems';
 
 // styles
 import styles from '../../styles/layout/Header.module.scss';
@@ -15,11 +16,17 @@ export default function Header() {
     <div className={styles.header}>
      <Logo />
       <Nav>
-        <NavItem title='home' /* icon={<AiOutlineHome />} */ url='/' />
-        <NavItem title='work' /* icon={<GiTargeted />} */ url='#work'></NavItem>
-        <NavItem title='code' /* icon={<GiSkills />} */ url='/dev' />
-        <NavItem title='dance' /* icon={<GiTechnoHeart />} */ url='/dance' />
-        <NavItem title='about' /* icon={<GiDodging />} */ url='/about' />
+        {navItems.map(({title, url, icon}, i) => (
+           <NavItem title={title}  icon={icon}  url={url} i={i} key={title}/>
+        ))
+          
+        }
+       {/*  <NavItem title='home'  icon={<AiOutlineHome />}  url='/' />
+        <NavItem title='work'  icon={<GiTargeted />}  url='#work'></NavItem>
+        <NavItem title='code'  icon={<GiSkills />}  url='/dev' />
+        <NavItem title='dance'  icon={<GiTechnoHeart />}  url='/dance' />
+        <NavItem title='about'  icon={<GiDodging />}  url='/about' />
+        <NavItem title='contact'  icon={<GiTargeted />}  url='/contact' /> */}
       </Nav>
     </div>
   );

@@ -62,23 +62,6 @@
   cursor: pointer;
 }
 
-/* .link_icon {
-  --button-size: calc(60px * 0.8);
-  width: 42px;
-  height: 42px;
-  padding: 0 0.5rem;
-   align-items: center;
-   justify-content: center;
-   transition: filter 300ms;
-   svg path {
-    fill: $color-5;
-  }
-} */
-
-.nav_icon {
-  color: $color-white;
-}
-
 a .mobile {
   display: none;
 }
@@ -95,13 +78,22 @@ a .mobile {
   color: $color-1;
   text-transform: uppercase;
   overflow: hidden;
-  
+  display: flex;
+  align-items: center;
+
+  :nth-child(1) {
+    padding: 0.025rem;
+    margin-right: 0.15rem;
+    margin-top: 0.1rem;
+  }  
 
   > span {
     position: relative;
     font-family: $font-nav;
     text-shadow: 1px 1px 1px black;
     pointer-events: none;
+
+    
     
   }
   
@@ -196,7 +188,7 @@ a .mobile {
 
   .nav_menu {
     position: fixed;
-    top: 54px;
+    top: 100px;
     bottom: 0;
     width: 100%;
     min-height: 100%;
@@ -297,7 +289,6 @@ a .mobile {
 @media screen and (max-width: 360px) {
 
   .nav_menu {
-
 
     .nav_item {
       left: 1vw;
