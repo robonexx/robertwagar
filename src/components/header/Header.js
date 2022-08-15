@@ -1,6 +1,7 @@
 import Nav from '../nav/Nav';
 import NavItem from '..//nav/NavItem';
 import { navItems } from '../../assets/data/navItems';
+import { Link } from 'react-router-dom';
 
 // styles
 import styles from '../../styles/layout/Header.module.scss';
@@ -14,7 +15,11 @@ import { GiSkills } from 'react-icons/gi'; */
 export default function Header() {
   return (
     <div className={styles.header}>
-     <Logo />
+      <Link to="/">
+      <Logo />
+      </Link>
+      
+    
       <Nav>
         {navItems.map(({title, url, icon}, i) => (
            <NavItem title={title}  icon={icon}  url={url} i={i} key={title}/>
