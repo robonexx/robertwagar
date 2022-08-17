@@ -23,10 +23,10 @@
 
 .bgscroll {
   transition: 0.3s ease;
-  background: $color-gradient;
+  background: $color-5;
   & .nav_links {
-    color: #555555;
-    text-shadow: 2px 2px 1px black;
+    color: $color-2;
+    text-shadow: 1px 1x 3px rgba(0, 0, 0, 0.329);
   }
 }
 
@@ -146,7 +146,6 @@ a .mobile {
   }
 }
 
-
 @media screen and (max-width: 960px) {
   .navbar {
     position: fixed;
@@ -158,7 +157,7 @@ a .mobile {
   .menu_btn {    
     position: fixed;
     top: 2vh;
-    right: 14vw;
+    right: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;

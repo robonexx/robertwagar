@@ -1,0 +1,14 @@
+@use '../../styles/base/' as *;
+.headline {
+    position: relative;
+    margin: 20rem auto 3rem;
+    font-family: $font-alt;
+    color: $color-black;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        margin: 10rem auto 1rem;
+    } 
+}

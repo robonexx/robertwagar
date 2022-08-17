@@ -1,4 +1,4 @@
-import {useRef} from 'react'
+import {useEffect, useRef} from 'react'
 import {motion} from 'framer-motion'
 import {useSpring, animated} from 'react-spring'
 
@@ -8,15 +8,36 @@ export default function Theme({lights, lightsOnOff}) {
     /* const [lights, setLights] = useState(false) */
 
     const { x } = useSpring({ duration: 300, x: lights ? 1 : 0 });
-    
-      const bgRef = useRef()
-    
+      const themeRef = useRef()    
       /* const lightsOnOff = () => {
           setLights(!lights)
           lights ? bgRef.current.style.backgroundColor = '#fafafa' : bgRef.current.style.backgroundColor = '#121212'
       } */
+
+      useEffect(() => {
+        if (window.innerWidth > 959) {
+          let prevScrollpos = window.pageYOffset;
+    
+          const handleScroll = () => {
+            let currentScrollPos = window.pageYOffset;
+    
+            if (prevScrollpos > currentScrollPos) {
+             /*  themeRef.current.classList.add('theme'); */
+              themeRef.current.classList.remove('hide');
+            } else {
+              themeRef.current.classList.add('hide');
+              /* themeRef.current.classList.remove('theme'); */
+            }
+            prevScrollpos = currentScrollPos;
+          };
+          window.addEventListener('scroll', handleScroll);
+          return () => {
+            window.removeEventListener('scroll', handleScroll);
+          };
+        }
+      }, []);
         return (
-          <motion.div className='theme' ref={bgRef}>      
+          <motion.div className='theme' ref={themeRef}>      
            {/*  <button onClick={lightsOnOff}>
               {!lights ? 'Turn off' : 'Turn on'}
             </button> */}

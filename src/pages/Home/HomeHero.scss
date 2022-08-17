@@ -1,5 +1,5 @@
 .house  {
-    position: absolute;
+    position: relative;
     top: 100px;
     width: 100%;
     height: 400px;
@@ -47,29 +47,28 @@
         } 
     }
 
-    h2 {
+    > h2 {
         position: absolute;
-        top: 45vh;
+        top: 35vh;
         left: 45%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         transform: scale(1);
-        position: fixed;
-        z-index: 50;
+        z-index: 100;
         @media screen and (max-width: 768px) {
-            font-size: 1.6rem;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%);
+            width: 50%;
+            font-size: 0.8rem;
+            top: 10%;
+            left: 5%;
         } 
     }
 
     .text_light {
-        color: #182a5f;
+       /*  color: #ededee; */
         font-weight: 800;
     }
 
     .text_dark {
-        color: #8a8a8a;
+        color: #282828;
         font-weight: 100;
         z-index: 101;
     }

@@ -17,9 +17,7 @@ export default function Header() {
     <div className={styles.header}>
       <Link to="/">
       <Logo />
-      </Link>
-      
-    
+      </Link>  
       <Nav>
         {navItems.map(({title, url, icon}, i) => (
            <NavItem title={title}  icon={icon}  url={url} i={i} key={title}/>

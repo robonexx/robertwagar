@@ -34,7 +34,7 @@ export default function HomeHero({lights}) {
 
   return (
     <div className={`house ${daytime}`} ref={dayRef}>
-        <h2 className={open ? 'text_light' : 'text_dark'}>{open ? (`Hi there! How may I be of service?`) : ('Sorry, we are closed, feel free to send us an Email.')} </h2>
+        <h2 className={open ? 'text_light' : 'text_dark'}>{open ? (`Hi there! How may I be of service for you today?`) : ('Sorry, office is closed, feel free to send us an Email 24/7.')} </h2>
         <div className={lights ? 'overlay' : ''}></div>
         <svg width="160" height="99" viewBox="0 0 160 99" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="2.5" y="3.5" width="139" height="95" fill="#372517" stroke="black"/>
