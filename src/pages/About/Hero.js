@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Rob1 from '../../Rob1';
 import RobBg from '../../RobBg';
 
+
 // styles
 import './Hero.scss';
 
@@ -158,12 +159,13 @@ export default function Hero() {
       </motion.div>
 
       <div className='bg'>
-        <div className='image_bg'>
+        {/* <div className='image_bg'>
           <RobBg />
         </div>
         <div className='image'>
           <Rob1 />
-        </div>
+        </div> */}
+    
       </div>
       <motion.p
         className='youknow'
