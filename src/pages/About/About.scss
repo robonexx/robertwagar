@@ -5,14 +5,18 @@
     height: 100%;
     overflow-x: hidden;
     position: relative;
-   background-color: #F14019;
+    background-color: #F14019;
+
+    &.darkm {
+      background-color: #3a1006;
+    }
     
 
    .buttons {
     position: absolute;
     top: 50vh;
     left: 50vw;
-    z-index: 1001;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -154,7 +158,7 @@
       @media screen and (max-width: '760px') {
           left: -15%;
           transform: scale(0.5);
-          z-index: 1000;
+          z-index: 99;
       }
   
       .svgText {

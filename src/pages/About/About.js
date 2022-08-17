@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 // styles
 import './About.scss'
 
-export default function About() {
+export default function About({lights}) {
   const [isOn, setIsOn] = useState(false)
 
   document.querySelector('body').addEventListener('mousemove', eyeball);
@@ -21,7 +21,7 @@ export default function About() {
   /*  console.log(event) */
 };
   return (
-    <motion.div className='about'>
+    <motion.div className={!lights ? 'about' : 'about darkm'}>
 
       <div className="buttons">
       <motion.div className="btn btn-prev">
@@ -30,7 +30,7 @@ export default function About() {
       </motion.div>
       <motion.div className="btn btn-next" onMouseEnter={() => {setIsOn(true)}} onMouseLeave={() => {setIsOn(false)}}>
      {/*  <Robone /> */}
-     <div>Next</div>
+     <div>Hover</div>
       </motion.div>
       </div>
       

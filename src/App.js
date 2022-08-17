@@ -24,7 +24,7 @@ function App() {
         <Theme lights={lights} setLights={setLights} lightsOnOff={lightsOnOff}/>
         <Routes>
           <Route path="/" element={<Home lights={lights}/>}/>
-          <Route path="about" element={<About/>}/>
+          <Route path="about" element={<About lights={lights}/>}/>
           <Route path="contact" element={<Contact lights={lights}/>}/>
           {/* <Route path="/landing" element={<Landing/>}/> */}
         </Routes>
