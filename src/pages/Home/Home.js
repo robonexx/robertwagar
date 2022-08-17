@@ -11,7 +11,7 @@ export default function Home({lights}) {
     <div className='home'>
         <HomeHero lights={lights} />s
         <Headline>
-          <h1>Kre8tiv is a way of life</h1>
+          <h1>Developer open to work</h1>
         </Headline>
         <Section> 
         <Content1 />
