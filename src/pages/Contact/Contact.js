@@ -27,7 +27,7 @@ const CoffeeSvg = ({lights}) => {
         initial={{strokeDashoffset: 0, pathLength: 0}}
         animate={{strokeDashoffset: 1, pathLength: 1,
             strokeWidth: 2, stroke: col}}
-        transition={{duration: 1, delay: 0.1}}
+        transition={{duration: 2, delay: 0.1}}
         />
         </motion.svg>
         </>
