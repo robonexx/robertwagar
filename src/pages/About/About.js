@@ -21,7 +21,7 @@ export default function About({lights}) {
   /*  console.log(event) */
 };
   return (
-    <motion.div className={!lights ? 'about' : 'about darkm'}>
+    <motion.div className={!lights ? 'about' : 'about'}>
 
       <div className="buttons">
       <motion.div className="btn btn-prev">
@@ -35,7 +35,7 @@ export default function About({lights}) {
       </div>
       
       <div className='container'>
-          <Talk isOn={isOn}/>
+          <Talk isOn={isOn} lights={lights}/>
           <Face />      
       </div>
     </motion.div>
@@ -90,14 +90,16 @@ const Face = () => {
   )
 }
 
-const Talk = ({isOn}) => {
+const Talk = ({isOn, lights}) => {
  
   return (
     <div className="talk">
     <svg width="696" height="460" viewBox="0 0 696 460" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M395.195 460C560.88 460 695.195 357.025 695.195 230C695.195 102.975 560.88 0 395.195 0C260.575 0 146.665 67.9798 108.682 161.606C104.932 163.777 100.494 166.737 95.2826 170.599C49.0259 204.886 13.416 178.897 3.12616 169.107C1.04502 166.561 0.0708579 165.634 0.104061 165.807C0.137265 165.98 1.17783 167.253 3.12616 169.107C4.39223 170.656 6.06799 172.804 8.17586 175.668C32.5079 208.728 84.1675 223.565 95.23 226.427C95.2064 227.616 95.1946 228.807 95.1946 230C95.1946 357.025 229.509 460 395.195 460Z" fill="#F8F0F0"/>
-    <text className="svgText" x="150" y="150">{!isOn ? 'Hi there?!' : 'Im always looking for creative'}</text>
-    <text className="svgText" x="150" y="200">{!isOn ? 'I am Rob, a parent, developer and dancer' : 'solutions in everythings life.'}</text>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M395.195 460C560.88 460 695.195 357.025 695.195 230C695.195 102.975 560.88 0 395.195 0C260.575 0 146.665 67.9798 108.682 161.606C104.932 163.777 100.494 166.737 95.2826 170.599C49.0259 204.886 13.416 178.897 3.12616 169.107C1.04502 166.561 0.0708579 165.634 0.104061 165.807C0.137265 165.98 1.17783 167.253 3.12616 169.107C4.39223 170.656 6.06799 172.804 8.17586 175.668C32.5079 208.728 84.1675 223.565 95.23 226.427C95.2064 227.616 95.1946 228.807 95.1946 230C95.1946 357.025 229.509 460 395.195 460Z" 
+    stroke={!lights ? 'black' : 'transparent'}
+    fill="#F8F0F0"/>
+    <text className="svgText" x="150" y="150">{!isOn ? 'Hi there! I am Rob' : 'Im always looking for creative'}</text>
+    <text className="svgText" x="150" y="200">{!isOn ? 'A parent, developer & dancer' : 'solutions in everythings life.'}</text>
     <text className="svgText" x="150" y="250">{!isOn ? 'A creative mind who loves to build' : 'Without creativity, where would we be?'}</text>
     <text className="svgText" x="150" y="300">{!isOn ? 'things for the internet.' : 'It is the key to solving our problems'}</text>
     </svg>
