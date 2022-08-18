@@ -11,7 +11,7 @@ export default function Home({ lights }) {
     <div className="home">
       <HomeHero lights={lights} />
       <Headline>
-        <h1>CONSULTING / DESIGN / DEVELOPMENT</h1>
+        <h1>CONSULTING / DEVELOPMENT / DESIGN</h1>
       </Headline>
       <Section>
         <Content1 />
