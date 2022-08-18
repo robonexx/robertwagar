@@ -1,0 +1,6 @@
+.global_art {
+    position: relative;
+    @media screen and (max-width: 768px) {
+        transform: scale(0.8);
+      } 
+}

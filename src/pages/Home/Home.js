@@ -1,4 +1,5 @@
 import React from "react";
+import GlobalArt from "../../assets/svg/GlobalArt";
 import Headline from "../../components/headline/Headline";
 import Section from "../../components/section/Section";
 
@@ -25,16 +26,27 @@ const Content1 = () => {
   return (
     <>
       <h2>
-        Looking for a developer to bring your ideas to life? <br/> 
+        Looking for a developer to bring your <b>ideas to life</b>? <br/> 
         You've come to the right place.
       </h2>
       <h2>
-        I develope useful web experiences & applications with focus on creating
-        aesthetic user interfaces & smart interactions
+        I develope <b>useful web experiences</b> & <b>applications</b> with focus on creating
+        <b> aesthetic user interfaces</b> & <b>smart interactions</b>
       </h2>
       <h2>
-        Creativity, art, design & technology in the hands of the right minds has
-        the tools to solve our future problems.
+        <b>Creativity, art, design & technology</b> in the hands of the right minds has
+        the tools to <b>solve</b> our future <b>problems</b>.
+      </h2>
+      <div className="svg_container">
+        <GlobalArt />
+      </div>
+      
+      <h2>     
+        <b>Design </b> should be equally about what it does as much as how it <b>attracts the eye</b>.
+      </h2>
+      <h2>
+        As a developer I'm focused on <b>finding</b> the <b>best solutions</b> for you problems.
+      And we will <b>work together</b> to do so.
       </h2>
     </>
   );

@@ -2,11 +2,14 @@
 .headline {
     position: relative;
     margin: 20rem auto 3rem;
-    font-family: $font-alt;
-    color: $color-black;
     font-size: 3rem;
     font-weight: 800;
     text-align: center;
+
+    >h1 {
+        font-family: $font-alt;
+        color: $color-black;
+    }
 
     @media screen and (min-width: 768px) {
         margin: 15rem auto 1rem;
