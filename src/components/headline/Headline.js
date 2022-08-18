@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import './Headline.scss'
+import "./Headline.scss";
 
-const Headline = ({children}) => {
-  return (
-    <div className='headline'>{children}</div>
-  )
-}
+const Headline = ({ children }) => {
+  return <div className="headline">{children}</div>;
+};
 
-export default Headline
+export default Headline;

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import styles from '../../styles/components/Nav.module.scss';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import styles from "../../styles/components/Nav.module.scss";
 
 export default function NavItem(props) {
   const [click, setClick] = useState(false);
@@ -35,22 +35,17 @@ export default function NavItem(props) {
       onMouseLeave={onMouseLeave}
       initial={{ opacity: 0, y: i % 2 === 0 ? -100 : 100 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: i * 0.1 }} 
+      transition={{ duration: 1, delay: i * 0.1 }}
     >
       <svg className={styles.svg} viewBox="0 0 54 54">
-        <circle className={styles.anicircle} cx="15" cy="27" r="10"/>
+        <circle className={styles.anicircle} cx="15" cy="27" r="10" />
       </svg>
-      <a
-        href={url}
-        onClick={closeMobileMenu}
-        className={styles.nav_links}
-      >
+      <a href={url} onClick={closeMobileMenu} className={styles.nav_links}>
         <span>{icon}</span>
-        <span>{ title }</span>
+        <span>{title}</span>
       </a>
       {dropdown && children}
       {click && children}
     </motion.li>
   );
 }
-

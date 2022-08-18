@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Rob1 from '../../Rob1';
-import RobBg from '../../RobBg';
-
+import React from "react";
+import { motion } from "framer-motion";
+import Rob1 from "../../Rob1";
+import RobBg from "../../RobBg";
 
 // styles
-import './Hero.scss';
+import "./Hero.scss";
 
 const transition = { duration: 0.3, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -88,15 +87,15 @@ const letter3 = {
 export default function Hero() {
   return (
     <div>
-      <motion.div className='wrapper'>
+      <motion.div className="wrapper">
         <motion.div
-          className='overlay'
+          className="overlay"
           initial={{ opacity: 1 }}
           animate={{ opacity: [1, 0.8, 0.6, 0.2, 0] }}
           exit={{ opacity: 0 }}
           transition={{ delay: 2.5, duration: 1 }}
         >
-          <motion.div initial='initial' animate='animate' className='searching'>
+          <motion.div initial="initial" animate="animate" className="searching">
             <motion.p variants={Searching}>
               <motion.span variants={letter3}>s</motion.span>
               <motion.span variants={letter3}>e</motion.span>
@@ -113,7 +112,7 @@ export default function Hero() {
             </motion.p>
           </motion.div>
           <motion.p
-            className='wait'
+            className="wait"
             initial={{ opacity: 0, x: -200 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0 }}
@@ -127,15 +126,15 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 2.5, duration: 3 }}
         >
-          <motion.span>GOOGLE</motion.span>{' '}
-          <motion.span className='google_pro'>PRO?!</motion.span>
+          <motion.span>GOOGLE</motion.span>{" "}
+          <motion.span className="google_pro">PRO?!</motion.span>
         </motion.h1>
         <motion.div
-          initial='initial'
-          animate='animate'
-          className='text-animation'
+          initial="initial"
+          animate="animate"
+          className="text-animation"
         >
-          <motion.span className='first' variants={firstWord}>
+          <motion.span className="first" variants={firstWord}>
             <motion.span variants={letter}>s</motion.span>
             <motion.span variants={letter}>t</motion.span>
             <motion.span variants={letter}>a</motion.span>
@@ -143,7 +142,7 @@ export default function Hero() {
             <motion.span variants={letter}>k</motion.span>
           </motion.span>
           <br /> <br />
-          <motion.span className='last' variants={lastWord}>
+          <motion.span className="last" variants={lastWord}>
             <motion.span variants={letter2}>o</motion.span>
             <motion.span variants={letter2}>v</motion.span>
             <motion.span variants={letter2}>e</motion.span>
@@ -155,20 +154,18 @@ export default function Hero() {
             <motion.span variants={letter2}>!</motion.span>
           </motion.span>
         </motion.div>
-       
       </motion.div>
 
-      <div className='bg'>
+      <div className="bg">
         {/* <div className='image_bg'>
           <RobBg />
         </div>
         <div className='image'>
           <Rob1 />
         </div> */}
-    
       </div>
       <motion.p
-        className='youknow'
+        className="youknow"
         initial={{ opacity: 0, x: 200 }}
         animate={{ opacity: 1, x: 0, scale: [1, 0.8, 2, 1.5, 1] }}
         transition={{ delay: 4, duration: 0.6 }}

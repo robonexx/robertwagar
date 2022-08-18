@@ -1,13 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import './Section.scss'
+import "./Section.scss";
 
-const Section = ({children}) => {
-  return (
-    <div className='grid-3 section'>
-        {children}
-    </div>
-  )
-}
+const Section = ({ children }) => {
+  return <div className="grid-3 section">{children}</div>;
+};
 
-export default Section
+export default Section;

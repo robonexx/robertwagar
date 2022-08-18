@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import NavBtn from './NavBtn';
+import React, { useState, useEffect, useRef } from "react";
+import NavBtn from "./NavBtn";
 
 // styles
-import styles from '../../styles/components/Nav.module.scss';
+import styles from "../../styles/components/Nav.module.scss";
 
 export default function Nav(props) {
   const [click, setClick] = useState(false);
@@ -33,9 +33,9 @@ export default function Nav(props) {
         }
         prevScrollpos = currentScrollPos;
       };
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener("scroll", handleScroll);
       return () => {
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener("scroll", handleScroll);
       };
     }
   }, []);
