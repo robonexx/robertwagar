@@ -4,11 +4,21 @@ import {motion} from 'framer-motion'
 
 // styles
 import './Contact.scss'
+import Meeting from '../../assets/svg/Meeting'
 
 const Contact = ({lights}) => {
   return (
     <motion.div className='contact'>
+     
         <CoffeeSvg lights={lights} />
+        <div className='meeting'>
+        <div className="contact-text">
+      <p>Contact us and share your dreams</p>
+      <p>And we see to it that it becomes a reality</p>
+      </div>
+          <h2>Lets talk!</h2>
+        <Meeting />
+        </div>
     </motion.div>
   )
 }
