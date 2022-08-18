@@ -28,7 +28,7 @@ const pathVariants = {
   visible: {
     pathLength: 1,
     strokeWidth: 2,
-    stroke: "#f8f8f8",
+    stroke: "#F2E5D7",
     transition: {
       duration: 1,
       delay: 0.2,
