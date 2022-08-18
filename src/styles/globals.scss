@@ -91,7 +91,7 @@ font-size: 3.5rem;
     font-family: $font-base;
     color: $color-text-primary;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: $font-size-ml;
 
     @media screen and (max-width: 960px) {
       font-size: 1.5rem;

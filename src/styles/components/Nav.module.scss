@@ -54,7 +54,6 @@
   align-items: center;
   padding: 0 1.5rem;
   height: 100%;
-  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   overflow: hidden;
   z-index: 100;
   cursor: pointer;
@@ -78,6 +77,8 @@ a .mobile {
   overflow: hidden;
   display: flex;
   align-items: center;
+  transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  padding: 0.25rem 0.5rem;
 
   :nth-child(1) {
     padding: 0.025rem;
@@ -120,16 +121,38 @@ a .mobile {
 
   & .nav_links {
     color: rgb(107, 107, 107);
+
+    > :nth-child(1) {
+      color: #d6764d;
+    }
   }
+ 
   & .anicircle {
     stroke-dashoffset: 0;
   }
 
-  .link_icon {
-    transform: rotate(0.2deg) translateX(-2px);
-    svg path {
-      fill: $color-4;
+  // changing so that the last item on nav will not have
+  // the same effects, hiding the svg animation, same color on icon and text
+  &:nth-child(5) {
+
+    .nav_links {
+      color: #d6764d;
+      background-color: #282828;
+      border-radius: 5px;
+      > :nth-child(1) {
+        color: #d6764d;
+        
+      }   
     }
+
+    & .anicircle {
+      stroke-dashoffset: 300;
+      opacity: 0;
+    }
+    .svg {
+     opacity: 0;
+    }
+
   }
 }
 
@@ -259,10 +282,10 @@ a .mobile {
       font-size: $font-size-l;
       display: flex;
       flex-direction: row-reverse;
-      >span {
+      > span {
         padding: 0 0.5rem;
       }
-      >span:nth-of-type(1) {
+      > span:nth-of-type(1) {
         color: #888;
       }
     }

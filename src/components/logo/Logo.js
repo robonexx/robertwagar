@@ -41,11 +41,11 @@ const pathVariants = {
       "#fafafa00",
       "#fafafa00",
       "#fafafa00",
-      "#fafafa26",
-      "#fafafa4d",
-      "#fafafa80",
-      "#fafafabf",
-      "#fafafa",
+      "#F2E5D726",
+      "#F2E5D74d",
+      "#F2E5D780",
+      "#F2E5D7bf",
+      "#F2E5D7",
     ],
   },
 };
@@ -68,7 +68,7 @@ export default function Logo() {
           animate={{
             y: [-500, 10, -5, 0, 0, 0, 0],
             x: [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
-            fill: "#F55611",
+            fill: "#d6764d",
             stroke: "transparent",
           }}
           transition={{ duration: 2.3, delay: 1 }}
@@ -80,7 +80,7 @@ export default function Logo() {
           animate={{
             y: [500, -10, 5, 0, 0, 0, 0],
             x: [0, 0, 0, 0, 0, 0, 0, 0, 0, -3, 0],
-            fill: "#F55611",
+            fill: "#d6764d",
             stroke: "transparent",
           }}
           transition={{ duration: 2.3, delay: 1 }}
@@ -116,7 +116,7 @@ export default function Logo() {
           animate={{
             x: [-200, -200, 0, 100, 100, 100, -1, 5, 0, -3, 0, -10, -3, 0],
             y: [0, 0, 0, 0, 0, 0, 0, -30, -31, 0],
-            fill: "#F55611",
+            fill: "#d6764d",
             zIndex: 100,
             stroke: "transparent",
           }}

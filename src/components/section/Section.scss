@@ -6,14 +6,19 @@
     text-align: left;
 
     >h2 {
+        padding: 1rem 2rem;
+       /*  background-color: #d6764d; */
+        border-radius: 5px;
         margin: 1rem auto;
+        box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.103);
+        max-height: 200px;
     }
 
     @media screen and (min-width: 768px) {
         margin: 10rem auto 1rem;
 
         >h2 {
-            margin: 1rem 4rem;
+            margin: 4rem;
         }
     } 
 
