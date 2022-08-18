@@ -35,7 +35,7 @@ export default function HomeHero({ lights }) {
     <div className={`house ${daytime}`} ref={dayRef}>
       <h2 className={open ? "text_light" : "text_dark"}>
         {open
-          ? `Hi there! How may I be of service for you today?`
+          ? `Hi there! How may I be of service to You?`
           : "Sorry, office is closed, feel free to send us an Email 24/7."}{" "}
       </h2>
       <div className={lights ? "overlay" : ""}></div>
