@@ -90,7 +90,7 @@ const Meeting = () => {
           d="M152.008 85.1869L154 85.691L141.618 124.078L138.864 124.093L152.008 85.1869Z"
           fill="#C2C2C2"
         />
-        <path d="M98.9999 124.282H141.613" stroke="black" stroke-width="0.5" />
+        <path d="M98.9999 124.282H141.613" stroke="black" strokeWidth="0.5" />
         <path
           d="M281.775 107.471C294.989 104.978 312.828 92.5914 312.828 92.5914L310.158 84.4119C310.158 84.4119 294.255 96.2683 282.507 96.2606C274.96 96.2557 270.007 89.7507 263.817 91.3516C256.933 93.1316 250.913 107.822 254.392 106.928C257.872 106.034 271.264 109.453 281.775 107.471Z"
           fill="#94BBF5"
@@ -142,21 +142,21 @@ const Meeting = () => {
           <path
             d="M252.828 91C255.128 86.8333 252.828 86.4167 251.966 86.4167C249.253 86.4167 255.415 84.3333 253.69 82.25C251.966 80.1667 249.09 80.5833 252.828 76"
             stroke="#D5CBCB"
-            stroke-linecap="round"
+            strokeLinecap="round"
           />
         </g>
         <g filter="url(#filter2_d_53_160)">
           <path
             d="M248.219 91C249.752 88.7778 248.219 88.5556 247.644 88.5556C245.835 88.5556 249.943 87.4444 248.794 86.3333C247.644 85.2222 245.727 85.4444 248.219 83"
             stroke="#D5CBCB"
-            stroke-linecap="round"
+            strokeLinecap="round"
           />
         </g>
         <g filter="url(#filter3_d_53_160)">
           <path
             d="M258.219 91C259.752 88.2222 258.219 87.9444 257.644 87.9444C255.835 87.9444 259.943 86.5556 258.794 85.1667C257.644 83.7778 255.727 84.0556 258.219 81"
             stroke="#D5CBCB"
-            stroke-linecap="round"
+            strokeLinecap="round"
           />
         </g>
         <line
@@ -165,14 +165,14 @@ const Meeting = () => {
           x2="251.095"
           y2="98.9136"
           stroke="#085749"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
         <path
           d="M244.107 102.011C244.107 102.011 247.607 102.011 250.607 104.011"
           stroke="#085749"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
         <path
           d="M280.012 141.694C275.927 145.733 287.28 141.084 299.745 134.382C301.442 133.469 294.044 132.149 292.655 129.949C291.266 127.749 277.941 136.212 287.797 133.24C291.751 132.048 284.098 137.654 280.012 141.694Z"
@@ -189,14 +189,14 @@ const Meeting = () => {
         <path
           d="M241.04 95.0539C241.04 95.0539 244.86 95.7504 247.04 96.0495C248.959 96.3129 251.54 96.0495 251.54 96.0495"
           stroke="#085749"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
         <path
           d="M243 100.415C243 100.415 246.92 99.748 252.034 101.039"
           stroke="#085749"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
         />
         <path
           d="M303.132 58.5344C303.031 59.0773 302.289 59.3939 301.474 59.2416C300.66 59.0894 300.082 58.5258 300.184 57.983C300.285 57.4401 301.028 57.1234 301.842 57.2757C302.656 57.428 303.234 57.9915 303.132 58.5344Z"
@@ -287,14 +287,14 @@ const Meeting = () => {
         />
         <mask id="path-60-inside-1_53_160" fill="white">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M65.6051 14.2861C66.2219 8.39266 72.4358 3.90089 79.5434 4.16378C81.3822 2.52917 84.207 1.54967 87.2654 1.70949C88.5704 1.77768 89.7902 2.04664 90.8747 2.47306C92.7134 0.837382 95.5391 -0.142893 98.5986 0.0169852C103.645 0.280697 107.417 3.54655 107.023 7.31147C106.962 7.89565 106.804 8.45752 106.562 8.98896C108.559 11.0358 109.635 13.7086 109.335 16.5712C108.715 22.4956 102.439 27.0036 95.2847 26.6891C93.7534 29.2716 90.17 30.9919 86.1911 30.784C82.2084 30.5759 79.0197 28.498 78.046 25.7805C77.8743 25.7771 77.702 25.7709 77.5292 25.7619C70.3198 25.3851 64.9812 20.2473 65.6051 14.2861Z"
           />
         </mask>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M65.6051 14.2861C66.2219 8.39266 72.4358 3.90089 79.5434 4.16378C81.3822 2.52917 84.207 1.54967 87.2654 1.70949C88.5704 1.77768 89.7902 2.04664 90.8747 2.47306C92.7134 0.837382 95.5391 -0.142893 98.5986 0.0169852C103.645 0.280697 107.417 3.54655 107.023 7.31147C106.962 7.89565 106.804 8.45752 106.562 8.98896C108.559 11.0358 109.635 13.7086 109.335 16.5712C108.715 22.4956 102.439 27.0036 95.2847 26.6891C93.7534 29.2716 90.17 30.9919 86.1911 30.784C82.2084 30.5759 79.0197 28.498 78.046 25.7805C77.8743 25.7771 77.702 25.7709 77.5292 25.7619C70.3198 25.3851 64.9812 20.2473 65.6051 14.2861Z"
           fill="url(#paint0_radial_53_160)"
         />
@@ -327,9 +327,9 @@ const Meeting = () => {
             width="25"
             height="5.5"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -362,9 +362,9 @@ const Meeting = () => {
             width="9.99988"
             height="22.0001"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -397,9 +397,9 @@ const Meeting = () => {
             width="9"
             height="15"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -432,9 +432,9 @@ const Meeting = () => {
             width="8.99988"
             height="17.0001"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -468,8 +468,8 @@ const Meeting = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(84.9998 14.3799) rotate(-37.875) scale(11.4018 10.6704)"
           >
-            <stop offset="0.328125" stop-color="#DCCE50" stop-opacity="0.67" />
-            <stop offset="0.822917" stop-color="#FCFBF6" stop-opacity="0.14" />
+            <stop offset="0.328125" stopColor="#DCCE50" stopOpacity="0.67" />
+            <stop offset="0.822917" stopColor="#FCFBF6" stopOpacity="0.14" />
           </radialGradient>
         </defs>
       </svg>
