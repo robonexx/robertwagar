@@ -9,9 +9,9 @@ import HomeHero from "./HomeHero";
 export default function Home({ lights }) {
   return (
     <div className="home">
-      <HomeHero lights={lights} />s
+      <HomeHero lights={lights} />
       <Headline>
-        <h1>Developer open to work</h1>
+        <h1>CONSULTING / DESIGN / DEVELOPMENT</h1>
       </Headline>
       <Section>
         <Content1 />
@@ -25,8 +25,8 @@ const Content1 = () => {
   return (
     <>
       <h2>
-        If you are looking for a developer to bring your ideas to life, You've
-        come to the right place.
+        Looking for a developer to bring your ideas to life? <br/> 
+        You've come to the right place.
       </h2>
       <h2>
         I develope useful web experiences & applications with focus on creating

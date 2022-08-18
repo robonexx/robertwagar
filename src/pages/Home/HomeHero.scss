@@ -54,6 +54,7 @@
         font-size: 1.5rem;
         transform: scale(1);
         z-index: 100;
+        font-weight: 400;
         @media screen and (max-width: 768px) {
             width: 50%;
             font-size: 0.8rem;
@@ -63,13 +64,11 @@
     }
 
     .text_light {
-       /*  color: #ededee; */
-        font-weight: 800;
+        color: #121212;
+        
     }
 
     .text_dark {
-        color: #121212;
-        font-weight: 400;
-        z-index: 101;
+        color: #888;
     }
 }
