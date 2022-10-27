@@ -66,10 +66,10 @@
 
 .face_container {
   position: relative;
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  width: fit-content; */
   height: 420px;
   width: 280px;
 
@@ -79,10 +79,10 @@
 }
 .face {
   position: absolute;
-  display: flex;
+  /*  display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 1;
+  justify-content: center; */
+  z-index: 2;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -104,16 +104,19 @@
 
 .face > .eyes {
   position: absolute;
-  top: 37%;
+  top: 36%;
   left: 29%;
   display: flex;
   transform: rotate(5deg);
-  z-index: -1;
+  z-index: 1;
+  @media (max-width: "760px") {
+    transform: translateX(30%) rotate(5deg);
+  }
 }
 
 .face .eyeball {
-  width: 16px;
-  height: 16px;
+  width: 10%;
+  height: 10%;
   background: white;
   display: flex;
   align-items: center;
