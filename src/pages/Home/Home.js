@@ -1,6 +1,6 @@
 import React from "react";
 import GlobalArt from "../../assets/svg/GlobalArt";
-import Headline from "../../components/headline/Headline";
+
 import Section from "../../components/section/Section";
 import About from "../About/About";
 
@@ -12,9 +12,6 @@ export default function Home({ lights }) {
   return (
     <div className="home">
       <HomeHero lights={lights} />
-      <Headline>
-        <h1></h1>
-      </Headline>
 
       <About />
 

@@ -1,17 +1,19 @@
-@use './base' as *;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,800;1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap');
+@use "./base" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,800;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap");
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-  
 
-html, body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,7 +25,56 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
- body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -36,110 +87,120 @@ body {
   scroll-behavior: smooth;
 }
 
-article, aside, details, figcaption, figure, footer, header, nav, section, main{
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section,
+main {
   display: block;
   box-sizing: border-box;
 }
 
-ol, ul{
+ol,
+ul,
+li {
   list-style: none;
+  list-style-type: none;
 }
 
 a {
   text-decoration: none;
 }
 
-blockquote, q{
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after{
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
-table{
+table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-input{
+input {
   -webkit-appearance: none;
   border-radius: 0;
 }
 
-
-
 h1 {
-font-size: 3.5rem;
+  font-size: 3.5rem;
 
-@media screen and (max-width: 1185px) {
-  font-size: 2.5rem;
-}
+  @media screen and (max-width: 1185px) {
+    font-size: 2.5rem;
+  }
 
   @media screen and (max-width: 960px) {
     font-size: 2rem;
-}
-
-@media screen and (max-width: 40em) {
-  font-size: 1.6rem;
-}
-}
-
-
-  h2 {
-    font-family: $font-base;
-    color: $color-text-primary;
-    font-weight: 400;
-    font-size: $font-size-ml;
-
-    @media screen and (max-width: 960px) {
-      font-size: 1.5rem;
   }
 
   @media screen and (max-width: 40em) {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
 
-  
-  h3 {
+h2 {
+  font-family: $font-base;
+  color: $color-text-primary;
+  font-weight: 400;
+  font-size: $font-size-ml;
+
+  @media screen and (max-width: 960px) {
     font-size: 1.5rem;
+  }
 
-    @media screen and (max-width: 960px) {
-     
+  @media screen and (max-width: 40em) {
+    font-size: 1rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 960px) {
   }
   @media screen and (max-width: 40em) {
     font-size: 1rem;
   }
-  }
+}
 
-  h3 {
-    font-size: $font-size-base;
+h3 {
+  font-size: $font-size-base;
 
-    @media screen and (max-width: 960px) {
-     font-size: $font-size-base * 0.95;
+  @media screen and (max-width: 960px) {
+    font-size: $font-size-base * 0.95;
   }
   @media screen and (max-width: 40em) {
     font-size: $font-size-s;
   }
-  }
+}
 
-  
-  p {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    @media screen and (max-width: 960px) {
-     font-size: 1rem;
-     line-height: 1.1rem;
-    }
-    @media screen and (max-width: 40em) {
-        font-size: $font-size-base;
-        line-height: 1.2rem;       
+p {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  @media screen and (max-width: 960px) {
+    font-size: 1rem;
+    line-height: 1.1rem;
   }
+  @media screen and (max-width: 40em) {
+    font-size: $font-size-base;
+    line-height: 1.2rem;
   }
+}
 
-  /* Grid */
+/* Grid */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -158,12 +219,10 @@ font-size: 3.5rem;
   grid-gap: 1rem;
 }
 
-
 @media screen and (max-width: 768px) {
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
   }
- }
-
+}

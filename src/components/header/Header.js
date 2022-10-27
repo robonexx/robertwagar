@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // styles
 import styles from "../../styles/layout/Header.module.scss";
-import Logo from "../logo/Logo";
+/* import Logo from "../logo/Logo"; */
 import Rw from "../logo/Rw";
 /* import { AiOutlineHome } from 'react-icons/ai';
 import { GiDodging } from 'react-icons/gi';
