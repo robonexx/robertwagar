@@ -18,7 +18,7 @@
   border-bottom: 10px solid $color-client-2;
   position: fixed;
   transform: translateY(-105px);
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-out;
 }
 
 .bgscroll {
@@ -52,7 +52,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0.25rem 1.25rem;
   height: 100%;
   overflow: hidden;
   z-index: 100;
@@ -77,19 +77,25 @@ a .mobile {
   overflow: hidden;
   display: flex;
   align-items: center;
-  transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
   padding: 0.25rem 0.5rem;
 
   :nth-child(1) {
-    padding: 0.025rem;
-    margin-right: 0.15rem;
-    margin-top: 0.1rem;
+    margin-right: 0.25rem;
+    margin-top: 0.25rem;
+  }
+  :nth-child(2) {
+    position: fixed;
+    left: 0;
+    color: transparent;
+    width: 0;
+    transition: width 0.4s ease-in-out;
   }
 
   > span {
     position: relative;
     font-family: $font-alt;
-    text-shadow: 1px 1px 1px black;
     pointer-events: none;
   }
 
@@ -97,7 +103,7 @@ a .mobile {
     font-size: 1rem;
   }
 }
-
+/* 
 .svg {
   position: absolute;
   left: 0;
@@ -111,38 +117,41 @@ a .mobile {
     stroke: white;
     stroke-dasharray: 300 300;
     stroke-dashoffset: 300;
-    transition: stroke-dashoffset 1000ms linear;
+    transition: stroke-dashoffset 300ms ease, opacity 300ms ease;
     pointer-events: none;
+    opacity: 0;
   }
 }
-
+ */
 .nav_item:hover {
   background: transparent;
 
   & .nav_links {
-    color: rgb(107, 107, 107);
-
     > :nth-child(1) {
       color: #d6764d;
     }
+
+    > :nth-child(2) {
+      color: $color-1;
+      width: 100%;
+    }
   }
- 
+
   & .anicircle {
     stroke-dashoffset: 0;
+    opacity: 1;
   }
 
   // changing so that the last item on nav will not have
   // the same effects, hiding the svg animation, same color on icon and text
   &:nth-child(5) {
-
     .nav_links {
       color: #d6764d;
-      background-color: #282828;
+      background-color: transparent;
       border-radius: 5px;
       > :nth-child(1) {
         color: #d6764d;
-        
-      }   
+      }
     }
 
     & .anicircle {
@@ -150,9 +159,8 @@ a .mobile {
       opacity: 0;
     }
     .svg {
-     opacity: 0;
+      opacity: 0;
     }
-
   }
 }
 
@@ -218,8 +226,8 @@ a .mobile {
       margin-top: 10rem;
     }
     .nav_item {
-      left: 30vw;
-      height: fit-content;
+      left: 20vw;
+      height: 100px;
       width: 100%;
     }
 
@@ -260,7 +268,7 @@ a .mobile {
     top: 8rem;
     right: 2rem;
     &:hover {
-      background-color: lighten($color-client-2, 5%);
+      background-color: lighten($color-client-1, 5%);
     }
   }
 }
@@ -268,35 +276,57 @@ a .mobile {
 @media screen and (max-width: 768px) {
   .nav_menu {
     .nav_item {
-      left: 10vw;
+      left: 5vw;
       padding: 0 0.5rem;
       text-align: left;
-    }
 
-    .nav_item:nth-child(1) {
-      margin-top: 4rem;
+      .nav_item:nth-child(1) {
+        margin-top: 3rem;
+      }
+
+      &:hover {
+        &:nth-child(5) {
+          color: #d6764d;
+          background-color: #cecece;
+          border-radius: 5px;
+          > :nth-child(1) {
+            color: #d6764d;
+          }
+        }
+      }
     }
 
     .nav_links {
       width: 100%;
-      font-size: $font-size-l;
-      display: flex;
-      flex-direction: row-reverse;
+      font-size: $font-size-ml;
       > span {
         padding: 0 0.5rem;
       }
       > span:nth-of-type(1) {
-        color: #888;
+        color: $color-3;
+        filter: drop-shadow(1px 1px black);
+      }
+      :nth-child(2) {
+        position: fixed;
+        left: 5rem;
+        color: transparent;
+        width: 0;
+        transition: width 0.4s ease-in-out;
       }
     }
 
     .nav_links:hover {
-      color: $color-3;
+      > span:nth-of-type(2) {
+        color: $color-client-3;
+      }
+    }
+    &:last-of-type {
+      color: $color-1;
     }
   }
-  .nav_item a:before {
+  /*  .nav_item a:before {
     opacity: 0;
-  }
+  } */
 }
 @media screen and (max-width: 360px) {
   .nav_menu {

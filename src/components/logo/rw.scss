@@ -1,4 +1,4 @@
-.logo {
+.rw {
   position: absolute;
   width: 260px;
   height: 100px;
@@ -9,8 +9,8 @@
   left: 2vw;
   z-index: 1000;
 
-  @media screen and (max-width: "760px") {
+  @media screen and (max-width: "768px") {
     transform: scale(0.6);
-    left: 2vw;
+    left: 0vw;
   }
 }

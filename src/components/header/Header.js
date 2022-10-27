@@ -1,11 +1,12 @@
 import Nav from "../nav/Nav";
-import NavItem from "..//nav/NavItem";
+import NavItem from "../nav/NavItem";
 import { navItems } from "../../assets/data/navItems";
 import { Link } from "react-router-dom";
 
 // styles
 import styles from "../../styles/layout/Header.module.scss";
 import Logo from "../logo/Logo";
+import Rw from "../logo/Rw";
 /* import { AiOutlineHome } from 'react-icons/ai';
 import { GiDodging } from 'react-icons/gi';
 import { GiTechnoHeart } from 'react-icons/gi';
@@ -16,7 +17,8 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <Link to="/">
-        <Logo />
+        {/*  <Logo /> */}
+        <Rw />
       </Link>
       <Nav>
         {navItems.map(({ title, url, icon }, i) => (

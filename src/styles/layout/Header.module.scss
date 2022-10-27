@@ -1,17 +1,15 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-    display: flex;
-    width: inherit;
-    justify-content: space-between;
-    background-color: black;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  background-color: black;
+  overflow: hidden;
 
-    @media screen and (max-width: '760px') {   
-        height: 100px; 
-        justify-content: space-evenly;
-    }
+  @media screen and (max-width: "760px") {
+    height: 100px;
+  }
 }
-

@@ -6,18 +6,23 @@ import "./Contact.scss";
 import Meeting from "../../assets/svg/Meeting";
 
 const Contact = ({ lights }) => {
+  let Col = lights ? "white" : "black";
+
   return (
-    <motion.div className="contact">
-      <CoffeeSvg lights={lights} />
-      <div className="meeting">
-        <div className="contact-text">
-          <p>Contact us and share your dreams</p>
-          <p>And we see to it that it becomes a reality</p>
+    <>
+      <motion.div className="contact">
+        <CoffeeSvg lights={lights} />
+        <div className="meeting" style={{ color: Col }}>
+          <div className="contact-text">
+            <p>Contact us</p>
+            <p>Let us make your dreams reality</p>
+          </div>
+          <Meeting />
+          <h2>Book a meeting and Lets talk!</h2>
         </div>
-        <h2>Lets talk!</h2>
-        <Meeting />
-      </div>
-    </motion.div>
+      </motion.div>
+      <motion.div className="contact_form">Form goes here</motion.div>
+    </>
   );
 };
 

@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 
 // styles
 import "./About.scss";
+import Slider from "../../components/slider/Slider";
 
 export default function About({ lights }) {
   const [isOn, setIsOn] = useState(false);
 
   document.querySelector("body").addEventListener("mousemove", eyeball);
+  document.querySelector("body").addEventListener("touchmove", eyeball);
   function eyeball(event) {
     var eye = document.querySelectorAll(".eye");
 
@@ -25,7 +27,7 @@ export default function About({ lights }) {
       <div className="buttons">
         <motion.div className="btn btn-prev">
           {/*  <Robone /> */}
-          <div>? ...</div>
+          <div>Back</div>
         </motion.div>
         <motion.div
           className="btn btn-next"
@@ -37,14 +39,15 @@ export default function About({ lights }) {
           }}
         >
           {/*  <Robone /> */}
-          <div>Hover</div>
+          <div>Next</div>
         </motion.div>
       </div>
 
       <div className="container">
-        <Talk isOn={isOn} lights={lights} />
         <Face />
+        <Talk isOn={isOn} lights={lights} />
       </div>
+      {/*  <Slider /> */}
     </motion.div>
   );
 }
@@ -184,7 +187,7 @@ const Talk = ({ isOn, lights }) => {
           stroke={!lights ? "black" : "transparent"}
           fill="#F8F0F0"
         />
-        <text className="svgText" x="150" y="150">
+        {/*  <text className="svgText" x="150" y="150">
           {!isOn ? "Hi there! I am Rob" : "Im always looking for creative"}
         </text>
         <text className="svgText" x="150" y="200">
@@ -201,7 +204,7 @@ const Talk = ({ isOn, lights }) => {
           {!isOn
             ? "things for the internet."
             : "It is the key to solving our problems"}
-        </text>
+        </text> */}
       </svg>
     </div>
   );
